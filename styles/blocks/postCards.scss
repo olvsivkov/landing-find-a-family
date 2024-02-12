@@ -60,14 +60,13 @@
       justify-content: center;
       flex-wrap: wrap;
       padding-top: 7%;
-      gap: 5%;
 
       .postcard-item{
         //черно-белая открытка
       }
 
       .postcard-item-content{
-        width: 50%;
+       // position: relative;
 
         .choose{
           //выбери любовь
@@ -108,19 +107,44 @@
         .choose-card-1{
           background-image: url("../../assets/postcards/card-1/Group\ 140.svg");
         }
-        .choose-card-2{
-          background-image: url("../../assets/postcards/card-2/Group\ 140.svg");
-        }
         .arrow-card-1{
           background-image: url(../../assets/postcards/card-1/Frame\ 123.svg);
         }
+
+        .choose-card-2{
+          background-image: url("../../assets/postcards/card-2/Group\ 140.svg");
+        }
         .arrow-card-2{
           background-image: url(../../assets/postcards/card-2/Group\ 141.svg);
+          margin-left: 50%;
         }
 
+        .choose-card-3{
+          background-image: url("../../assets/postcards/card-3/Group\ 140.svg");
+        }
+        .arrow-card-3{
+          background-image: url(../../assets/postcards/card-3/Group\ 141.svg);
+        }
+
+        .choose-card-4{
+          background-image: url("../../assets/postcards/card-4/Group\ 140.svg");
+        }
+        .arrow-card-4{
+          background-image: url(../../assets/postcards/card-4/Group\ 141.svg);
+          margin-left: 50%;
+        }
+
+        .choose-card-5{
+          background-image: url("../../assets/postcards/card-5/Group\ 140.svg");
+        }
+        .arrow-card-5{
+          background-image: url(../../assets/postcards/card-5/Group\ 141.svg);
+        }
+      }
+
+      .postcard-gap-left {
+        margin-left: 9%;
       }
     }
-
   }
-
 }
