@@ -1,0 +1,18 @@
+.three-cards{
+  max-width: 1920px;
+  margin: auto;
+  background-image: url("../../assets/three_cards/Vector.svg");
+  background-color: $bg-color-light-green;
+  min-height: 734px;
+  display: flex;
+
+  .three-cards-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+  }
+}

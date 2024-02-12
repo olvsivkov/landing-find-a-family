@@ -1,0 +1,126 @@
+.postcards{
+  max-width: 1920px;
+  margin: auto;
+  background-color: $bg-color-light-green;
+  background-image: url("../../assets/postcards/AdobeStock_58137\ 1858\ 1.svg");
+  padding-top: 90px;
+
+  .postcards-title {
+    background-image: url("../../assets/postcards/Vector.svg");
+    background-repeat: no-repeat;
+    background-position: right center; 
+    width: 15%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 90px;
+
+    &>h2 {
+      font-family: 'Shantell Sans', cursive, sans-serif;
+      font-weight: 500;
+      font-size: 60px;
+      padding: 4% 0;
+      color: $text-color;
+    }
+  }
+
+  .postcards-wrapper {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 90px;
+
+    .cards-item {
+      flex-basis: 48%;
+      margin: 5px;
+      background-color: aliceblue;
+      border-radius: 40px;
+      height: 429px;
+      background-color: $color-orange-light;
+
+      &:first-child{
+        background-color: $bg-color-light-green;
+      }
+    }
+    
+    .first-item {
+      background-color: $bg-color-light-green;
+      background-image: url("../../assets/postcards/Group_118.svg");
+      background-repeat: no-repeat;
+      height: 70%;
+      width: 70%;
+      margin: 7% 0 0 7%;
+    }
+
+    .cards-item-inner-wrapper{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 7%;
+      gap: 5%;
+
+      .postcard-item{
+        //черно-белая открытка
+      }
+
+      .postcard-item-content{
+        width: 50%;
+
+        .choose{
+          //выбери любовь
+          background-repeat: no-repeat;
+          height: 40%;
+        }
+        .arrow{
+          //стрелка
+          background-repeat: no-repeat;
+          height: 40%;
+        }
+        .postcard-btn{
+          //кнопка
+          width: 249px;
+          height: 45px;
+          padding: 8px 76px 8px 76px;
+          border-radius: 56px;
+          background-color: $bg-color-green;
+          margin-top: 3%;
+          font-family: 'TT Norms Pro', sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          color: #ffffff;
+          cursor: pointer;
+          border: 1px solid $bg-color-green;
+          
+          &:hover{
+            background-color: $color-orange;
+            border: 1px solid $color-orange;
+          }
+
+          &:active{
+            background-color: $color-orange;
+            border: 1px solid $bg-color-green;
+          }
+        }
+
+        .choose-card-1{
+          background-image: url("../../assets/postcards/card-1/Group\ 140.svg");
+        }
+        .choose-card-2{
+          background-image: url("../../assets/postcards/card-2/Group\ 140.svg");
+        }
+        .arrow-card-1{
+          background-image: url(../../assets/postcards/card-1/Frame\ 123.svg);
+        }
+        .arrow-card-2{
+          background-image: url(../../assets/postcards/card-2/Group\ 141.svg);
+        }
+
+      }
+    }
+
+  }
+
+}

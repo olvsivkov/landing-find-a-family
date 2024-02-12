@@ -1,7 +1,22 @@
-body {
+body, h2 {
   margin: 0;
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 $desktop-width: 1920px;
 $bg-color-light-green: #CFF9C5;
+$bg-color-green: #73B064;
+$text-color: #414141;
+$color-orange: #F5B02B;
+$color-orange-light: #FFF8E3;
+
+html, body {
+  background-color: $bg-color-light-green;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

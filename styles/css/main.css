@@ -1,4 +1,17 @@
-body {
+@import url("https://fonts.cdnfonts.com/css/tt-norms-pro");
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap");
+body, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+html, body {
+  background-color: #CFF9C5;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -10,28 +23,25 @@ body {
   margin: auto;
   background-color: #CFF9C5;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 .header .header-content {
   width: 70%;
   max-width: 1360px;
   height: 739px;
   margin: auto;
-  margin-top: 39px;
+  padding: 39px;
   position: relative;
-  border: 1px solid red;
 }
 .header .header-content .found-logo {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 39px;
+  left: 39px;
 }
 .header .header-content .navigation {
   width: 70%;
   max-height: 108px;
   max-width: 719px;
   margin: auto;
-  border: 1px solid red;
 }
 .header .header-content .navigation .nav-list {
   display: flex;
@@ -40,10 +50,196 @@ body {
   align-items: center;
   padding: 0;
   padding-top: 30px;
-  border: 1px solid red;
 }
 .header .header-content .navigation .nav-list > li, .header .header-content .navigation .nav-list a {
   text-decoration: none;
   list-style: none;
-  border: 1px solid red;
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #414141;
+}
+.header .header-content .header-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-top: 5%;
+}
+.header .header-content .header-content-wrapper .text-content {
+  flex: 1;
+}
+.header .header-content .header-content-wrapper .text-content .batterfly-img {
+  position: relative;
+}
+.header .header-content .header-content-wrapper .text-content .batterfly-img > img {
+  padding-left: 80%;
+  height: 100px;
+  margin: auto;
+}
+.header .header-content .header-content-wrapper .text-content .text-content-title {
+  font-size: 60px;
+  margin-bottom: 7%;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 500;
+  color: #414141;
+}
+.header .header-content .header-content-wrapper .text-content .text-content-title > span {
+  font-size: 82px;
+  font-family: "Shantell Sans", cursive, sans-serif;
+  color: #73B064;
+}
+.header .header-content .header-content-wrapper .text-content .text-content-paragraph {
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 400;
+  color: #414141;
+  font-size: 24px;
+  margin-top: 2%;
+}
+.header .header-content .header-content-wrapper .text-content .choose-postcard-btn {
+  width: 292px;
+  height: 63px;
+  padding: 16px 32px 16px 32px;
+  border-radius: 56px;
+  background-color: #73B064;
+  margin-top: 7%;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header .header-content .header-content-wrapper .text-content .choose-postcard-btn:hover {
+  background-color: #F5B02B;
+}
+.header .header-content .header-content-wrapper .text-content .choose-postcard-btn:active {
+  background-color: #F5B02B;
+  border: 1px solid #73B064;
+}
+.header .header-content .header-content-wrapper .image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.three-cards {
+  max-width: 1920px;
+  margin: auto;
+  background-image: url("../../assets/three_cards/Vector.svg");
+  background-color: #CFF9C5;
+  min-height: 734px;
+  display: flex;
+}
+.three-cards .three-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+  margin: auto;
+}
+
+.postcards {
+  max-width: 1920px;
+  margin: auto;
+  background-color: #CFF9C5;
+  background-image: url("../../assets/postcards/AdobeStock_58137 1858 1.svg");
+  padding-top: 90px;
+}
+.postcards .postcards-title {
+  background-image: url("../../assets/postcards/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 15%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 90px;
+}
+.postcards .postcards-title > h2 {
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  padding: 4% 0;
+  color: #414141;
+}
+.postcards .postcards-wrapper {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 90px;
+}
+.postcards .postcards-wrapper .cards-item {
+  flex-basis: 48%;
+  margin: 5px;
+  background-color: aliceblue;
+  border-radius: 40px;
+  height: 429px;
+  background-color: #FFF8E3;
+}
+.postcards .postcards-wrapper .cards-item:first-child {
+  background-color: #CFF9C5;
+}
+.postcards .postcards-wrapper .first-item {
+  background-color: #CFF9C5;
+  background-image: url("../../assets/postcards/Group_118.svg");
+  background-repeat: no-repeat;
+  height: 70%;
+  width: 70%;
+  margin: 7% 0 0 7%;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 7%;
+  gap: 5%;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content {
+  width: 50%;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .choose {
+  background-repeat: no-repeat;
+  height: 40%;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .arrow {
+  background-repeat: no-repeat;
+  height: 40%;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .postcard-btn {
+  width: 249px;
+  height: 45px;
+  padding: 8px 76px 8px 76px;
+  border-radius: 56px;
+  background-color: #73B064;
+  margin-top: 3%;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #73B064;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .postcard-btn:hover {
+  background-color: #F5B02B;
+  border: 1px solid #F5B02B;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .postcard-btn:active {
+  background-color: #F5B02B;
+  border: 1px solid #73B064;
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .choose-card-1 {
+  background-image: url("../../assets/postcards/card-1/Group 140.svg");
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .choose-card-2 {
+  background-image: url("../../assets/postcards/card-2/Group 140.svg");
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .arrow-card-1 {
+  background-image: url(../../assets/postcards/card-1/Frame\ 123.svg);
+}
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .arrow-card-2 {
+  background-image: url(../../assets/postcards/card-2/Group\ 141.svg);
 }

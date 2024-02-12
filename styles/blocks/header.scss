@@ -5,21 +5,19 @@
   margin: auto;
   background-color: $bg-color-light-green;
   box-sizing: border-box;
-  border: 1px solid red;
 
   .header-content{
     width: 70%;
     max-width: 1360px;
     height: 739px;
     margin: auto;
-    margin-top: 39px;
+    padding: 39px;
     position: relative;
-    border: 1px solid red;
 
     .found-logo {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 39px;
+      left: 39px;
     }
 
     .navigation{
@@ -27,7 +25,6 @@
         max-height: 108px;
         max-width: 719px;
         margin: auto;
-        border: 1px solid red;
 
       .nav-list {
         display: flex;
@@ -36,13 +33,81 @@
         align-items: center;
         padding: 0;
         padding-top: 30px;
-        border: 1px solid red;
         
         & > li, a {
           text-decoration: none;
           list-style: none; 
-          border: 1px solid red;
+          font-family: 'Shantell Sans', cursive, sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          color: $text-color;
         }
+      }
+    }
+
+    .header-content-wrapper{
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      margin-top: 5%;
+
+      .text-content{
+        flex: 1;
+        .batterfly-img{
+          position: relative;
+          &>img {
+            padding-left: 80%;
+            height: 100px;
+            margin: auto;
+
+          }
+        }
+        .text-content-title{
+          font-size: 60px;
+          margin-bottom: 7%;
+          font-family: 'TT Norms Pro', sans-serif;
+          font-weight: 500;
+          color: $text-color;
+          &>span{
+            font-size: 82px;
+            font-family: 'Shantell Sans', cursive, sans-serif;
+            color: $bg-color-green;
+          }
+        }
+        .text-content-paragraph {
+          font-family: 'TT Norms Pro', sans-serif;
+          font-weight: 400;
+          color: $text-color;
+          font-size: 24px;
+          margin-top: 2%;
+        }
+        .choose-postcard-btn{
+          width: 292px;
+          height: 63px;
+          padding: 16px 32px 16px 32px;
+          border-radius: 56px;
+          background-color: $bg-color-green;
+          margin-top: 7%;
+          font-family: 'TT Norms Pro', sans-serif;
+          font-weight: 500;
+          font-size: 26px;
+          color: #ffffff;
+          cursor: pointer;
+
+          &:hover{
+            background-color: $color-orange;
+          }
+
+          &:active{
+            background-color: $color-orange;
+            border: 1px solid $bg-color-green;
+          }
+        }
+      }
+      .image-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
       }
     }
   }

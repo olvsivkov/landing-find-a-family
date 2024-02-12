@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.postcards .postcards-wrapper {
+  height: 1347px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.postcards .postcards-wrapper .cards-item {
+  flex-basis: calc(50% - 10px); /* 10px - это значение margin между блоками */
+  margin: 5px;
+}
