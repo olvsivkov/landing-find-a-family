@@ -7,5 +7,66 @@
   .about-fund-wrapper{
     height: 1627px;
     padding: 10% 0 10% 0;
+    width: 70%;
+    margin: auto;
+  
+
+    .about-fund-title {
+      @include block-title();
+      background-image: url("../../assets/fund/Vector-1.svg");
+      width: 300px;
+    }
+  }
+
+  .af-first-block{
+    @include about-fund-block();
+    margin: auto;
+
+    .af-pic-1{
+      background-image: url("../../assets/fund/af-1/Group\ 82.svg");
+      @include af-pic(); 
+    }
+
+    .af-text-1{
+      background-image: url("../../assets/fund/af-1/Group\ 143.svg");
+      @include af-text();
+    }
+  }
+
+  .af-second-block{
+    @include about-fund-block();
+
+    .af-text-2{
+      background-image: url("../../assets/fund/af-2/Group\ 144.svg");
+      @include af-text();
+    }
+
+    .af-pic-2{
+      background-image: url("../../assets/fund/af-2/Frame\ 129.svg");
+      @include af-pic();
+    }
+
+  }
+
+  .af-third-block{
+    @include about-fund-block();
+    margin: auto;
+
+    .af-pic-3{
+      background-image: url("../../assets/fund/af-3/Frame\ 130.svg");
+      @include af-pic();
+    }
+    .af-text-3{
+      background-image: url("../../assets/fund/af-3/Group\ 145.svg");
+      @include af-text();
+    }
+  }
+
+  .af-line{
+    background-image: url("../../assets/fund/af-line/Vector\ 11.svg");
+    background-repeat: no-repeat;
+    height: 3%;
+    width: 70%;
+    margin: auto;
   }
 }

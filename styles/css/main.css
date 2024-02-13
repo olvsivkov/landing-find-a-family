@@ -147,13 +147,12 @@ html, body {
   padding-top: 90px;
 }
 .postcards .postcards-title {
-  background-image: url("../../assets/postcards/Vector.svg");
   background-repeat: no-repeat;
-  background-position: right center;
   width: 15%;
   height: auto;
   margin: auto;
   margin-bottom: 90px;
+  background-image: url("../../assets/postcards/Vector.svg");
 }
 .postcards .postcards-title > h2 {
   font-family: "Shantell Sans", cursive, sans-serif;
@@ -195,7 +194,7 @@ html, body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 7%;
+  padding-top: 10%;
 }
 .postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item-content .choose {
   background-repeat: no-repeat;
@@ -272,5 +271,91 @@ html, body {
 .about-fund .about-fund-wrapper {
   height: 1627px;
   padding: 10% 0 10% 0;
+  width: 70%;
+  margin: auto;
+}
+.about-fund .about-fund-wrapper .about-fund-title {
+  background-repeat: no-repeat;
+  width: 15%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 90px;
+  background-image: url("../../assets/fund/Vector-1.svg");
+  width: 300px;
+}
+.about-fund .about-fund-wrapper .about-fund-title > h2 {
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  padding: 4% 0;
+  color: #414141;
+}
+.about-fund .af-first-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 27%;
+  width: 85%;
+  margin: auto;
+}
+.about-fund .af-first-block .af-pic-1 {
+  background-image: url("../../assets/fund/af-1/Group 82.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}
+.about-fund .af-first-block .af-text-1 {
+  background-image: url("../../assets/fund/af-1/Group 143.svg");
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 60%;
+  margin-top: 9%;
+}
+.about-fund .af-second-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 27%;
+  width: 85%;
+}
+.about-fund .af-second-block .af-text-2 {
+  background-image: url("../../assets/fund/af-2/Group 144.svg");
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 60%;
+  margin-top: 9%;
+}
+.about-fund .af-second-block .af-pic-2 {
+  background-image: url("../../assets/fund/af-2/Frame 129.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}
+.about-fund .af-third-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 27%;
+  width: 85%;
+  margin: auto;
+}
+.about-fund .af-third-block .af-pic-3 {
+  background-image: url("../../assets/fund/af-3/Frame 130.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}
+.about-fund .af-third-block .af-text-3 {
+  background-image: url("../../assets/fund/af-3/Group 145.svg");
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 60%;
+  margin-top: 9%;
+}
+.about-fund .af-line {
+  background-image: url("../../assets/fund/af-line/Vector 11.svg");
+  background-repeat: no-repeat;
+  height: 3%;
+  width: 70%;
   margin: auto;
 }

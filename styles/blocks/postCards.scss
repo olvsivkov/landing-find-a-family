@@ -6,21 +6,8 @@
   padding-top: 90px;
 
   .postcards-title {
+    @include block-title();
     background-image: url("../../assets/postcards/Vector.svg");
-    background-repeat: no-repeat;
-    background-position: right center; 
-    width: 15%;
-    height: auto;
-    margin: auto;
-    margin-bottom: 90px;
-
-    &>h2 {
-      font-family: 'Shantell Sans', cursive, sans-serif;
-      font-weight: 500;
-      font-size: 60px;
-      padding: 4% 0;
-      color: $text-color;
-    }
   }
 
   .postcards-wrapper {
@@ -59,7 +46,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding-top: 7%;
+      padding-top: 10%;
 
       .postcard-item{
         //черно-белая открытка

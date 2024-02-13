@@ -14,6 +14,47 @@ $text-color: #414141;
 $color-orange: #F5B02B;
 $color-orange-light: #FFF8E3;
 
+// оглавление Открытки, О фонде, Пожертвования
+@mixin block-title() {
+  background-repeat: no-repeat;
+  //background-position: right center; 
+  width: 15%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 90px;
+
+  &>h2 {
+    font-family: 'Shantell Sans', cursive, sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    padding: 4% 0;
+    color: $text-color;
+  }
+}
+
+// блоки о фонде
+
+@mixin about-fund-block() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 27%;
+  width: 85%;
+}
+
+@mixin af-pic() {
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+}
+
+@mixin af-text() {
+  background-repeat: no-repeat;
+  height: 60%;
+  width: 60%;
+  margin-top: 9%;
+}
+
 html, body {
   background-color: $bg-color-light-green;
   height: 100%;
