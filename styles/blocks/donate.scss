@@ -1,0 +1,57 @@
+.donate{
+  position: relative;
+  top: -100px;
+  max-width: 1920px;
+  background-image: url(../../assets/donate/Vector.png);
+  background-repeat: no-repeat;
+  margin: auto;
+
+  height: 2372px; // потом удалить
+
+  .donate-wrap{
+    padding-top: 10%;
+    width: 70%;
+    margin: auto;
+
+    .donate-text {
+      .donate-p{
+        white-space: pre-line;
+        margin: auto;
+        font-family: $text-norms-pro;
+        color: $text-color;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        line-height: 56px;
+
+        &>span{
+          font-family: $text-shantell-sans;
+          color: $bg-color-green;
+        }
+      }
+
+      .donate-flower{
+        display: flex;
+        justify-content: center;
+
+        &>img{
+        width: 63px;
+        padding: 3% 0 0 0;
+        margin: auto;
+        }
+      }
+    }
+
+    .donate-title {
+      @include block-title();
+      background-image: url("../../assets/fund/Vector-1.svg");
+      width: 300px;
+
+      &>h2{
+        position: relative;
+        left: -70px;
+        margin-top: 30%;
+      }
+    }
+  }
+}

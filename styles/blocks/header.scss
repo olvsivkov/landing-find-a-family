@@ -82,26 +82,7 @@
           margin-top: 2%;
         }
         .choose-postcard-btn{
-          width: 292px;
-          height: 63px;
-          padding: 16px 32px 16px 32px;
-          border-radius: 56px;
-          background-color: $bg-color-green;
-          margin-top: 7%;
-          font-family: 'TT Norms Pro', sans-serif;
-          font-weight: 500;
-          font-size: 26px;
-          color: #ffffff;
-          cursor: pointer;
-
-          &:hover{
-            background-color: $color-orange;
-          }
-
-          &:active{
-            background-color: $color-orange;
-            border: 1px solid $bg-color-green;
-          }
+          @include choose-postcard-btn();
         }
       }
       .image-content {

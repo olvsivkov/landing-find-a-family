@@ -1,0 +1,18 @@
+.donate {
+  position: relative;
+  top: -100px;
+  max-width: 1920px;
+  background-image: url(../../assets/donate/Vector.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  height: 2372px;
+}
+.donate .donate-text .donate-p {
+  white-space: pre;
+  width: 35%;
+  margin: auto;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+}

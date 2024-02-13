@@ -1,0 +1,31 @@
+.thanks-mom {
+  height: 538px;
+  width: 70%;
+  margin: auto;
+}
+.thanks-mom .thanks-mom-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.thanks-mom .thanks-mom-wrapper .mom-pic {
+  flex: 1;
+}
+.thanks-mom .thanks-mom-wrapper .mom-pic > img {
+  width: 694px;
+  height: 538px;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text {
+  flex: 1;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text > p {
+  height: 50%;
+  padding-top: 35%;
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+}

@@ -96,9 +96,9 @@ html, body {
   margin-top: 2%;
 }
 .header .header-content .header-content-wrapper .text-content .choose-postcard-btn {
-  width: 292px;
   height: 63px;
   padding: 16px 32px 16px 32px;
+  border: 1px solid #73B064;
   border-radius: 56px;
   background-color: #73B064;
   margin-top: 7%;
@@ -110,6 +110,7 @@ html, body {
 }
 .header .header-content .header-content-wrapper .text-content .choose-postcard-btn:hover {
   background-color: #F5B02B;
+  border: 1px solid #F5B02B;
 }
 .header .header-content .header-content-wrapper .text-content .choose-postcard-btn:active {
   background-color: #F5B02B;
@@ -270,7 +271,7 @@ html, body {
 }
 .about-fund .about-fund-wrapper {
   height: 1627px;
-  padding: 10% 0 10% 0;
+  padding: 10% 0 5% 0;
   width: 70%;
   margin: auto;
 }
@@ -358,4 +359,111 @@ html, body {
   height: 3%;
   width: 70%;
   margin: auto;
+}
+
+.thanks-mom {
+  max-width: 1920px;
+  margin: auto;
+}
+.thanks-mom .thanks-mom-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 70%;
+  margin: auto;
+}
+.thanks-mom .thanks-mom-wrapper .mom-pic {
+  flex: 1;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text {
+  flex: 1;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text > p {
+  font-family: "Shantell Sans", cursive, sans-serif;
+  color: #414141;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  padding-top: 35%;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text > button {
+  height: 63px;
+  padding: 16px 32px 16px 32px;
+  border: 1px solid #73B064;
+  border-radius: 56px;
+  background-color: #73B064;
+  margin-top: 7%;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30%;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text > button:hover {
+  background-color: #F5B02B;
+  border: 1px solid #F5B02B;
+}
+.thanks-mom .thanks-mom-wrapper .mom-text > button:active {
+  background-color: #F5B02B;
+  border: 1px solid #73B064;
+}
+
+.donate {
+  position: relative;
+  top: -100px;
+  max-width: 1920px;
+  background-image: url(../../assets/donate/Vector.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  height: 2372px;
+}
+.donate .donate-wrap {
+  padding-top: 10%;
+  width: 70%;
+  margin: auto;
+}
+.donate .donate-wrap .donate-text .donate-p {
+  white-space: pre-line;
+  margin: auto;
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  line-height: 56px;
+}
+.donate .donate-wrap .donate-text .donate-p > span {
+  font-family: "Shantell Sans", cursive, sans-serif;
+  color: #73B064;
+}
+.donate .donate-wrap .donate-text .donate-flower {
+  display: flex;
+  justify-content: center;
+}
+.donate .donate-wrap .donate-text .donate-flower > img {
+  width: 63px;
+  padding: 3% 0 0 0;
+  margin: auto;
+}
+.donate .donate-wrap .donate-title {
+  background-repeat: no-repeat;
+  width: 15%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 90px;
+  background-image: url("../../assets/fund/Vector-1.svg");
+  width: 300px;
+}
+.donate .donate-wrap .donate-title > h2 {
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  padding: 4% 0;
+  color: #414141;
+}
+.donate .donate-wrap .donate-title > h2 {
+  position: relative;
+  left: -70px;
 }
