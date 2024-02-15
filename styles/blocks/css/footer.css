@@ -1,0 +1,47 @@
+.find-family .find-family-links .social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+.find-family .find-family-links .social-icons > li {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.find-family .find-family-links .social-icons a {
+  position: relative;
+  background-color: #eee;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+}
+.find-family .find-family-links .social-icons a:hover {
+  background-color: #e0e0e0;
+}
+.find-family .find-family-links .social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: 0.65rem;
+  top: 0.65rem;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+.find-family .find-family-links .social-icons .social-icon-vk::before {
+  background-image: url("../../assets/footer/Vector.svg");
+}
+.find-family .find-family-links .social-icons .social-icon-telegram::before {
+  background-image: url("../../assets/footer/Vector-tme.svg");
+}
+.find-family .find-family-links .social-icons .social-icon-send::before {
+  background-image: url("../../assets/footer/Vector-send.svg");
+}

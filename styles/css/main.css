@@ -364,6 +364,10 @@ html, body {
 .thanks-mom {
   max-width: 1920px;
   margin: auto;
+  position: relative;
+  bottom: -85px;
+  z-index: -1;
+  border-top: 3px solid #CFF9C5;
 }
 .thanks-mom .thanks-mom-wrapper {
   display: flex;
@@ -411,13 +415,11 @@ html, body {
 }
 
 .donate {
-  position: relative;
-  top: -100px;
   max-width: 1920px;
   background-image: url(../../assets/donate/Vector.png);
   background-repeat: no-repeat;
   margin: auto;
-  height: 2372px;
+  padding-bottom: 5%;
 }
 .donate .donate-wrap {
   padding-top: 10%;
@@ -538,7 +540,7 @@ html, body {
   align-items: center;
 }
 .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper {
-  width: 88%;
+  width: 89%;
   height: 88%;
   display: flex;
   flex-direction: column;
@@ -627,7 +629,7 @@ html, body {
   left: -7px;
 }
 .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide {
-  width: 160px;
+  width: 159px;
   border: 1px solid #73B064;
   border-radius: 40px;
   text-align: center;
@@ -731,4 +733,128 @@ html, body {
   letter-spacing: 0.01em;
   text-align: center;
   color: #ffffff;
+}
+
+.footer {
+  max-width: 1920px;
+  margin: auto;
+  background-color: #ffffff;
+}
+.footer .find-family-wrapper {
+  width: 70%;
+  margin: auto;
+}
+.footer .find-family-wrapper .find-family-links > a {
+  display: block;
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+.footer .find-family-wrapper .find-family-links > p {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+.footer .find-family-wrapper .find-family-links .social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+.footer .find-family-wrapper .find-family-links .social-icons > li {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.footer .find-family-wrapper .find-family-links .social-icons a {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 59px;
+  height: 59px;
+}
+.footer .find-family-wrapper .find-family-links .social-icons a:hover {
+  background-color: #e0e0e0;
+}
+.footer .find-family-wrapper .find-family-links .social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+.footer .find-family-wrapper .find-family-links .social-icons .social-icon-vk::before {
+  background-image: url("../../assets/footer/Vector.svg");
+}
+.footer .find-family-wrapper .find-family-links .social-icons .social-icon-telegram::before {
+  background-image: url("../../assets/footer/Vector-tme.svg");
+}
+.footer .find-family-wrapper .find-family-links .social-icons .social-icon-send::before {
+  background-image: url("../../assets/footer/Vector-send.svg");
+}
+.footer .find-family-wrapper .requisites-wrap {
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+}
+.footer .find-family-wrapper .requisites-wrap > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-up {
+  display: flex;
+  flex-direction: column;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-up .reg-title {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 500;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-up .reg-text {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 5%;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-down {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-down .reg-title {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 500;
+}
+.footer .find-family-wrapper .requisites-wrap > div .req-down .reg-text {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 400;
 }

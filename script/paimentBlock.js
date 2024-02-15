@@ -21,12 +21,13 @@ function showSlides(slideIndex = 0) {
   }
 }
 
-// toggler помощь единоразовая и ежемесячная
+// toggler id="pay-active" в блоках помощь единоразовая/ежемесячная и выбор суммы доната.
 
 const helpFields = document.querySelectorAll('.help-field > div');
+const sums = document.querySelectorAll('.choose-sum-wrap > div');
 
-function handleClick(event) {
-  helpFields.forEach(elem => {
+function handleClick(event, elements) {
+  elements.forEach(elem => {
     elem.removeAttribute('id');
   });
   if (event.target.id === 'pay-active') return;
@@ -34,24 +35,11 @@ function handleClick(event) {
 }
 
 helpFields.forEach(elem => {
-  elem.addEventListener('click', handleClick);
+  elem.addEventListener('click', (event) => handleClick(event, helpFields));
 });
 
-// toggler выбора сумм пожертвования
-
-const sums = document.querySelectorAll('.choose-sum-wrap > div');
-
-function handleClickSum(event) {
-  sums.forEach(elem => {
-    elem.removeAttribute('id');
-  });
-  if (event.target.id === 'pay-active') return;
-  event.target.id = 'pay-active';
-}
-
 sums.forEach(elem => {
-  elem.addEventListener('click', handleClickSum);
+  elem.addEventListener('click', (event) => handleClick(event, sums));
 })
-
 
 

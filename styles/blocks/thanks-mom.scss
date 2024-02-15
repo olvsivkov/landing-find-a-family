@@ -1,6 +1,10 @@
 .thanks-mom{
   max-width: 1920px;
   margin: auto;
+  position: relative;
+  bottom: -85px;
+  z-index: -1;
+  border-top: 3px solid $bg-color-light-green;
 
   .thanks-mom-wrapper {
     display: flex;

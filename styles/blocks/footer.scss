@@ -1,0 +1,118 @@
+.footer{
+  max-width: 1920px;
+  margin: auto;
+  background-color: $text-color-white;
+
+  .find-family-wrapper{
+    width: 70%;
+    margin: auto;
+
+    .find-family-links{
+  
+      &>a{
+        display: block;
+        font-family: $text-norms-pro;
+        color: $text-color;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+      }
+  
+      &>p{
+        font-family: $text-norms-pro;
+        color: $text-color;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+      }
+  
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+      
+        &>li {
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
+        & a {
+          display: block;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 59px;
+          height: 59px;
+        }
+        & a:hover {
+          background-color: #e0e0e0;
+        }
+        & a::before {
+          content: "";
+          position: absolute;
+          width: 59px;
+          height: 59px;
+          background: transparent no-repeat center center;
+          background-size: 100% 100%;
+        }
+        & .social-icon-vk::before {
+          background-image: url("../../assets/footer/Vector.svg");
+        }
+        & .social-icon-telegram::before {
+          background-image: url("../../assets/footer/Vector-tme.svg");
+        }
+        & .social-icon-send::before {
+          background-image: url("../../assets/footer/Vector-send.svg");
+        }
+      }
+    }
+
+    .requisites-wrap {
+      display: flex;
+      flex-direction: row;
+      height: 110px;
+      padding: 7% 0;
+
+      &>div{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .req-up{
+          display: flex;
+          flex-direction: column;
+
+          .reg-title{
+            @include req-content();
+            font-weight: 500;
+          }
+          .reg-text{
+            @include req-content();
+            font-weight: 400;
+            margin-bottom: 5%;
+          }
+        }
+
+        .req-down {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          bottom: 0;
+
+          .reg-title{
+            @include req-content();
+            font-weight: 500;
+          }
+          .reg-text{
+            @include req-content();
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
