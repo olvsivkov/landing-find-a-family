@@ -3,18 +3,48 @@
   background-image: url(../../assets/fund/Vector.svg);
   background-repeat: no-repeat;
   margin: auto;
+  overflow: hidden;
+
+  @media (max-width: 639px){
+    background-image: url(../../assets/fund/Vector-640.svg);
+  }
   
   .about-fund-wrapper{
     height: 1627px;
-    padding: 10% 0 5% 0;
-    width: 70%;
+    padding: 10% 0 10% 0;
+    width: 80%;
     margin: auto;
+
+    @media (max-width: 1600px){
+      width: 90%;
+    }
+
+    @media (max-width: 1300px){
+      padding: 30% 0 15% 0;
+    }
   
+    @media (max-width: 1101px){
+      height: 1650px;
+      padding: 30% 0 1% 0;
+    }
+
+    @media (max-width: 999px){
+      height: 1769px;
+    }
+
+    @media (max-width: 620px){
+      padding: 30% 0 0 0;
+    }
+
 
     .about-fund-title {
       @include block-title();
       background-image: url("../../assets/fund/Vector-1.svg");
       width: 300px;
+
+      @media (max-width: 639px){
+        background-image: url("../../assets/fund/Vector-360.svg");
+      }
     }
   }
 
@@ -22,28 +52,105 @@
     @include about-fund-block();
     margin: auto;
 
+    @media (max-width: 1600px){
+      width: 90%;
+    }
+
+    @media (max-width: 1001px){
+      height: 18%;
+      padding-bottom: 15%;
+    }
+
+    @media (max-width: 999px){
+      flex-direction: column;
+      height: 500px;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 639px){
+      align-items: normal;
+    }
+
     .af-pic-1{
-      background-image: url("../../assets/fund/af-1/Group\ 82.svg");
       @include af-pic(); 
+
+      @media (max-width: 1359px){
+        width: 267px;
+        height: 243px;
+      }
+
     }
 
     .af-text-1{
-      background-image: url("../../assets/fund/af-1/Group\ 143.svg");
       @include af-text();
+      transform: rotate(-7deg);
+      
+      @media (max-width: 1359px){
+        height: 99.79px;
+        font-size: 20px;
+        width: 505px;
+        padding-top: 10%;
+      }
+
+      @media (max-width: 639px){
+        width: 300px;
+      }
     }
   }
 
   .af-second-block{
     @include about-fund-block();
 
+    @media (max-width: 1600px){
+      width: 90%;
+    }
+
+    @media (max-width: 1359px){
+      height: 18%;
+      padding-bottom: 15%;
+    }
+
+    @media (max-width: 999px){
+      flex-direction: column;
+      height: 500px;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 639px){
+      align-items: normal;
+    }
+
     .af-text-2{
-      background-image: url("../../assets/fund/af-2/Group\ 144.svg");
       @include af-text();
+      transform: rotate(7deg);
+
+      @media (max-width: 1359px){
+        height: 99.79px;
+        order: 2;
+        font-size: 20px;
+        width: 505px;
+        padding-top: 10%;
+      }
+
+      @media (max-width: 999px){
+        padding-top: 0;
+      }
+
+      @media (max-width: 639px){
+        width: 300px;
+      }
     }
 
     .af-pic-2{
-      background-image: url("../../assets/fund/af-2/Frame\ 129.svg");
       @include af-pic();
+
+      @media (max-width: 1359px){
+        width: 267px;
+        height: 243px;
+        order: 1;
+      }
     }
 
   }
@@ -52,13 +159,52 @@
     @include about-fund-block();
     margin: auto;
 
+    @media (max-width: 1600px){
+      width: 90%;
+    }
+
+    @media (max-width: 1359px){
+      height: 18%;
+      padding-bottom: 15%;
+    }
+
+    @media (max-width: 999px){
+      flex-direction: column;
+      height: 500px;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 639px){
+      align-items: normal;
+    }
+
     .af-pic-3{
-      background-image: url("../../assets/fund/af-3/Frame\ 130.svg");
       @include af-pic();
+
+      @media (max-width: 1359px){
+        width: 267px;
+        height: 243px;
+      }
     }
     .af-text-3{
-      background-image: url("../../assets/fund/af-3/Group\ 145.svg");
       @include af-text();
+      transform: rotate(-7deg);
+
+      @media (max-width: 1359px){
+        height: 99.79px;
+        font-size: 20px;
+        width: 505px;
+        padding-top: 10%;
+      }
+
+      @media (max-width: 999px){
+        padding-top: 0;
+      }
+
+      @media (max-width: 639px){
+        width: 300px;
+      }
     }
   }
 

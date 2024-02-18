@@ -2,10 +2,20 @@
   max-width: 1920px;
   margin: auto;
   background-color: $text-color-white;
+  padding-top: 10%;
+  overflow: hidden;
+
+  @media (max-width: 639px){
+    padding-top: 50%;
+  }
 
   .find-family-wrapper{
     width: 70%;
     margin: auto;
+
+    @media (max-width: 1100px){
+      width: 100%;
+    }
 
     .find-family-links{
   
@@ -76,11 +86,18 @@
       height: 110px;
       padding: 7% 0;
 
+      @media (max-width: 1100px){
+        flex-direction: column;
+        height: auto;
+      }
+      
+
       &>div{
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 2%;
         
         .req-up{
           display: flex;

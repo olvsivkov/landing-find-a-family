@@ -5,6 +5,18 @@
   background-color: $bg-color-light-green;
   min-height: 734px;
   display: flex;
+  overflow: hidden;
+
+  @media (max-width: 1359px) {
+    background-image: url("../../assets/three_cards/Vector-1000.svg");
+    height: 442px;
+    min-height: auto;
+  }
+
+    @media (max-width: 888px) {
+    background-image: url("../../assets/three_cards/Vector-768.svg");
+    height: 866px;
+  }
 
   .three-cards-wrapper{
     display: flex;
@@ -12,7 +24,25 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 70%;
     margin: auto;
+
+    @media (max-width: 888px) {
+      flex-direction: column;
+      height: 705px;
+    }
+
+    .cards-item {
+
+      img {
+        width: 433px;
+        height: 332px;
+
+        @media (max-width: 1359px) {
+          width: 267px;
+          height: 205px;
+        }
+
+      }
+    }
   }
 }

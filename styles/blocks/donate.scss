@@ -3,14 +3,32 @@
   background-image: url(../../assets/donate/Vector.png);
   background-repeat: no-repeat;
   margin: auto;
-  padding-bottom: 5%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1000px){
+    background-image: url(../../assets/donate/Vector-1000.svg);
+  }
+
 
   .donate-wrap{
     padding-top: 10%;
-    width: 70%;
     margin: auto;
 
+    @media (max-width: 1356px){
+      width: 90%;
+    }
+
+    @media (max-width: 888px){
+      width: 99%;
+    }
+
     .donate-text {
+
+      @media (max-width: 639px){
+        display: none;
+      }
+
       .donate-p{
         white-space: pre-line;
         margin: auto;
@@ -20,6 +38,11 @@
         font-size: 32px;
         text-align: center;
         line-height: 56px;
+
+        @media (max-width: 1356px){
+          font-size: 20px;
+        }
+
 
         &>span{
           font-family: $text-shantell-sans;
@@ -35,6 +58,11 @@
         width: 63px;
         padding: 3% 0 0 0;
         margin: auto;
+
+        @media (max-width: 770px){
+          width: 48px;
+          height: 48px;
+        }
         }
       }
     }
@@ -44,15 +72,27 @@
       background-image: url("../../assets/fund/Vector-1.svg");
       width: 300px;
 
+      @media (max-width: 639px){
+        background-image: url("../../assets/fund/Vector-360.svg");
+        height: 150px;
+        font-size: 46px;
+        width: 50%;
+      }
+
       &>h2{
         position: relative;
         left: -70px;
         margin-top: 30%;
+
+        @media (max-width: 1358px){
+          margin-top: 10%;
+        }
+
       }
     }
 
     .donate-pay{
-      width: 1360px;
+      max-width: 1360px;
       height: 852px;
       display: flex;
       flex-direction: column;
@@ -65,17 +105,52 @@
       border-radius: 40px;
       background-color: $color-pink-light;
       position: relative;
+      margin: auto;
+
+      @media (max-width: 1440px){
+        padding: 0 0;
+      }
+
+      @media (max-width: 1358px){
+        padding: 7% 7%;
+        height: auto;
+        width: 780px;
+        gap: 10px;
+      }
+
+      @media (max-width: 888px){
+        padding: 7% 0;
+        width: 600px;
+      }
+
+      @media (max-width: 639px){
+        padding: 7% 0;
+        width: 100%;
+      }
 
       &>img{
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @media (max-width: 639px){
+          bottom: -12%;
+        }
       }
 
       .donate-pay-text{
         width: 480px;
         height: 226px;
         position: relative;
+
+        @media (max-width: 1358px){
+          order: 1;
+        }
+
+        @media (max-width: 639px){
+          width: 100%;
+        }
+
 
         &>p{
           font-family: $text-shantell-sans;
@@ -86,27 +161,47 @@
           letter-spacing: 0em;
           text-align: left;
 
+          @media (max-width: 639px){
+            font-size: 24px;
+          }
+
           &>span{
             font-size: 50px;
             color: $text-color-orange;
+
+            @media (max-width: 639px){
+              font-size: 24px;
+            }
           }
         }
 
         &>img{
           position: absolute;
-          right: -7%;
-          top: 30%;
+          right: 7%;
+          top: 50%;
+
+          @media (max-width: 639px){
+            font-size: 24px;
+          }
         }
       }
       .donate-qr-code{
         width: 241px;
         height: 283px;
+
+        @media (max-width: 1358px){
+          order: 4;
+        }
       }
       .send-letter{
         width: 289px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
+        @media (max-width: 1358px){
+          order: 3;
+        }
 
         &>p{
           font-family: $text-norms-pro;
@@ -115,18 +210,31 @@
           font-weight: 400;
           line-height: 60px;
         }
+
+        &>img {
+          cursor: pointer;
+        }
       }
       .payment-block{
         width: 563px;
-        height: 732px;
+        height: 802px;
         background-color: $text-color-white;
         border-radius: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
+        
+        @media (max-width: 1358px){
+          order: 2;
+        }
+
+        @media (max-width: 639px){
+          width: 99%;
+          overflow: hidden;
+        }
 
         .paiment-block-wrapper{
-          width: 89%;
+          width: 95%;
           height: 88%;
           display: flex;
           flex-direction: column;
@@ -141,11 +249,31 @@
             border-radius: 40px;
             border: 1px solid $bg-color-green;
 
+            @media (max-width: 639px){
+              width: 100%;
+            }
+
             .one-time{
               @include help-field-block();
+
+              @media (max-width: 639px){
+                flex: 1;
+                font-size: 12px;
+                padding: 0;
+                padding-top: 4%;
+              }
+
             }
             .mounthly{
               @include help-field-block();
+
+              @media (max-width: 639px){
+                flex: 1;
+                font-size: 12px;
+                padding: 0;
+                padding-top: 4%;
+              }
+
             }
           }
           .under-help-field{
@@ -164,6 +292,11 @@
             justify-content: space-between;
             width: 499px;
             height: 56px;
+
+            @media (max-width: 639px){
+              width: 100%;      
+              height: auto;      
+            }
           
             .sum-item{
               padding: 16px 22px 16px 22px;
@@ -176,6 +309,10 @@
               letter-spacing: 0.01em;
               text-align: center;
               cursor: pointer;
+
+              @media (max-width: 639px){
+                padding: 16px 20px 16px 20px;          
+              }
             }
 
             .input {
@@ -200,12 +337,20 @@
         form{
 
           .pay-input-form{
-            @include pay-input-form()
+            @include pay-input-form();
+
+            @media (max-width: 639px){
+              width: 100%;            
+            }
           }
           .pay-form-submit{
             @include pay-input-form();
             @include pay-active();
             cursor: pointer;
+
+            @media (max-width: 639px){
+              width: 100%;            
+            }
           }
           .form-checkbox{
             @include pay-checkbox(); 

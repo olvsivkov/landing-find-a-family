@@ -13,10 +13,10 @@
       <img class="found-logo" src="./assets/header/Logotip.svg" alt="The foundations logo">
       <nav class="navigation">
         <ul class="nav-list">
-          <li><a href="">Открытки</a></li>
-          <li><a href="">О фонде</a></li>
-          <li><a href="">Помощь в цифрах</a></li>
-          <li><a href="">Пожертвовать</a></li>
+          <li><a href="#postCard">Открытки</a></li>
+          <li><a href="#aboutFund">О фонде</a></li>
+          <li><a href="#didgitHelp">Помощь в цифрах</a></li>
+          <li><a href="#donate">Пожертвовать</a></li>
         </ul>
       </nav>
       <div class="header-content-wrapper">
@@ -65,16 +65,21 @@
         </div>
       </div>
     </section>
-    <section class="postcards">
+    <section id="postCard" class="postcards">
       <div class="postcards-title">
+
+        <div class="left-flower"></div>
+        <div class="right-flower"></div>
+
         <h2>Открытки</h2>
       </div>
       <div class="postcards-wrapper">
-
+        <div class="orange-cloud-1000">
+          <img src="./assets/postcards/Group_118.svg" alt="orange cloud">
+        </div>
         <div class="cards-item first-elem">
           <div class="first-item"></div>
         </div>
-
         <div class="cards-item">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
@@ -87,7 +92,6 @@
             </div>
           </div>
         </div>
-
         <div class="cards-item">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item-content">
@@ -100,7 +104,6 @@
             </div>
           </div>
         </div>
-
         <div class="cards-item">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
@@ -113,7 +116,6 @@
             </div>
           </div>
         </div>
-
         <div class="cards-item">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item-content ">
@@ -126,7 +128,6 @@
             </div>
           </div>
         </div>
-
         <div class="cards-item">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
@@ -140,25 +141,32 @@
           </div>
         </div>
       </div>
+      <div class="dots">
+        <span class="dot dot-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </section>
-    <section class="about-fund">
+    <section id="aboutFund" class="about-fund">
         <div class="about-fund-wrapper">
           <div class="about-fund-title">
             <h2>О фонде</h2>
           </div>
           <div class="af-first-block">
-            <div class="af-pic-1"></div>
-            <div class="af-text-1"></div>
+            <img class="af-pic-1" src="./assets/fund/af-1/Group 82.svg" alt="first pic">
+            <p class="af-text-1">Там, где не было значимого взрослого, всегда есть место пустоте и одиночеству.</p>
           </div>
           <div class="af-line"></div>
           <div class="af-second-block">
-            <div class="af-text-2"></div>
-            <div class="af-pic-2"></div>
+            <p class="af-text-2">Благодаря работе фонда “Найди семью” дети могут почувствовать любовь, поддержку и заботу приемных родителей и всегда быть вместе.</p>
+            <img class="af-pic-2" src="./assets/fund/af-2/Frame 129.svg" alt="second pic">
           </div>
           <div class="af-line"></div>
           <div class="af-third-block">
-            <div class="af-pic-3"></div>
-            <div class="af-text-3"></div>
+            <img class="af-pic-3" src="./assets/fund/af-3/Frame 130.svg" alt="text three">
+            <p class="af-text-3">Мама – важный человек для каждого ребенка!</p>
           </div>
         </div>
     </section>
@@ -169,13 +177,13 @@
         </div>
         <div class="mom-text">
           <p> - <q>Спасибо, мама!</q></p>
-          <button>Выбрать открытку</button>
+          <a href="#postCard"><button>Выбрать открытку</button></a>
         </div>
       </div>
     </section>
     <section class="donate">
       <div class="donate-wrap">
-        <div class="donate-text">
+        <div id="didgitHelp" class="donate-text">
           <p class="donate-p">
             Только в <span>2023 году</span> фонд “Найди семью” помог <span>807 семьям</span>, 
             в которых воспитывается <span>1390 приёмных детей</span>,
@@ -189,7 +197,7 @@
             мы можем оказывать помощь приемным семьям по всей России регулярно.
           </p>
         </div>
-        <div class="donate-title">
+        <div id="donate" class="donate-title">
           <h2>Пожертвовать</h2>
         </div>
         <div class="donate-pay">
@@ -207,7 +215,7 @@
           </div>
           <div class="send-letter">
             <p>Напишите нам</p>
-            <img src="./assets/donate/Exclude.svg" alt="green arrow">
+            <img src="./assets/donate/Exclude.svg" alt="green arrow" onclick="openEmail()">
           </div>
           <div class="payment-block">
             <div class="paiment-block-wrapper">

@@ -4,14 +4,84 @@
   background-color: $bg-color-light-green;
   background-image: url("../../assets/postcards/AdobeStock_58137\ 1858\ 1.svg");
   padding-top: 90px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 1355px) {
+    .left-flower {
+      display: none
+    }
+
+    .right-flower {
+      display: none
+    }
+
+    .orange-cloud-1000 {
+      display: none
+    }
+  }
+
+  @media (max-width: 1355px) {
+    background-image: none;
+
+    .left-flower {
+      background-image: url("../../assets/postcards/AdobeStock_5813718\ 60-left_flower.svg");
+      width: 173px;
+      height: 2265px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      top: 250px;
+    }
+
+    .right-flower {
+      background-image: url("../../assets/postcards/AdobeStock_5813718\ 59-right-flower.svg");
+      width: 173px;
+      height: 2265px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      top: 250px;
+    }
+  }
+
+  @media (max-width: 638px){
+    .left-flower {
+      display: none
+    }
+
+    .right-flower {
+      display: none
+    }
+
+    .orange-cloud-1000 {
+      display: none
+    }
+  } 
+
 
   .postcards-title {
     @include block-title();
     background-image: url("../../assets/postcards/Vector.svg");
+
+    @media (max-width: 769px){
+      width: 50%;
+    }    
+
+    @media (max-width: 638px){
+      width: 50%;
+      height: 100px;
+    }  
+    
+    @media (max-width: 638px){
+      font-size: 42px;
+    }
   }
 
   .postcards-wrapper {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +89,56 @@
     justify-content: space-between;
     margin: auto;
     padding-bottom: 90px;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1600px) {
+      width: 95%;
+    }
+
+    @media (max-width: 1355px) {
+      width: 654px;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+
+      .orange-cloud-1000 {
+        display:block;
+        position: absolute;
+        top: -50px;
+        left: -130px;
+
+        
+        @media (max-width: 769px){
+          top: -30px;
+          left: -10px;
+        }
+
+        @media (max-width: 638px){
+          display: none;
+        }
+
+        img{
+          width: 255px;
+          height: 164px;
+
+          @media (max-width: 769px){
+            width: 175px;
+            height: 128px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 769px){
+      width: 570px;
+    }
+
+    @media (max-width: 638px){
+      width: 2000px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .cards-item {
       flex-basis: 48%;
@@ -28,19 +148,36 @@
       height: 429px;
       background-color: $color-orange-light;
 
-      &:first-child{
+      @media (max-width: 638px){
+        width: 328px;
+        height: 647px;
+        flex-basis: auto;
+      }
+    }
+
+    .first-elem{
+      background-color: $bg-color-light-green;
+
+      @media (max-width: 1355px) {
+        display: none;
+        width: 0;
+      }
+
+      .first-item {
         background-color: $bg-color-light-green;
+        background-image: url("../../assets/postcards/Group_118.svg");
+        background-repeat: no-repeat;
+        height: 70%;
+        width: 70%;
+        margin: 7% 0 0 7%;
+  
+        @media (max-width: 1355px) {
+          display: none;
+          width: 0;
+        }
       }
     }
     
-    .first-item {
-      background-color: $bg-color-light-green;
-      background-image: url("../../assets/postcards/Group_118.svg");
-      background-repeat: no-repeat;
-      height: 70%;
-      width: 70%;
-      margin: 7% 0 0 7%;
-    }
 
     .cards-item-inner-wrapper{
       display: flex;
@@ -50,20 +187,42 @@
 
       .postcard-item{
         //черно-белая открытка
+
+        @media (max-width: 638px) {
+          width: 178px;
+          height: 293px;
+          border-radius: 20px;
+          padding-bottom: 15%;
+          order: 1;
+        }
       }
 
       .postcard-item-content{
-       // position: relative;
+
+        @media (max-width: 638px) {
+          order: 2;
+        }
 
         .choose{
           //выбери любовь
           background-repeat: no-repeat;
           height: 40%;
+
+          @media (max-width: 638px) {
+            width: 245.9px;
+            height: 112.65px;
+            padding-bottom: 15%;
+          }
         }
         .arrow{
           //стрелка
           background-repeat: no-repeat;
           height: 40%;
+
+          @media (max-width: 638px) {
+            display: none;
+          }
+
         }
         .postcard-btn{
           //кнопка
@@ -134,4 +293,36 @@
       }
     }
   }
+
+
+  @media (min-width: 638px) {
+    .dots {
+      display: none;
+    }
+  }
+
+  @media (max-width: 637px) {
+    .dots {
+      height: 25px;
+      width: 225px;
+      margin: auto;
+      margin-top: 2%;
+  
+      .dot {
+        display: inline-block;
+        width: 24px; 
+        height: 24px; 
+        background-color: $color-dot-green-light;
+        border-radius: 50%; 
+        margin: 0 7px; 
+        cursor: pointer; 
+      }
+  
+      .dot-active {
+        background-color: $bg-color-green;
+      }
+    }
+  }
+
+
 }

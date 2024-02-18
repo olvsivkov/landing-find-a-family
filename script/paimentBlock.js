@@ -42,4 +42,9 @@ sums.forEach(elem => {
   elem.addEventListener('click', (event) => handleClick(event, sums));
 })
 
+// Напишите нам
+
+function openEmail() {
+  window.location.href = `mailto: info@sirota.ru`;
+}
 
