@@ -6,7 +6,7 @@
   overflow: hidden;
 
   @media (max-width: 639px){
-    background-image: url(../../assets/fund/Vector-640.svg);
+    background-image: url(./assets/fund/Vector-640.svg);
   }
   
   .about-fund-wrapper{
@@ -39,11 +39,11 @@
 
     .about-fund-title {
       @include block-title();
-      background-image: url("../../assets/fund/Vector-1.svg");
+      background-image: url("./assets/fund/Vector-1.svg");
       width: 300px;
 
       @media (max-width: 639px){
-        background-image: url("../../assets/fund/Vector-360.svg");
+        background-image: url("./assets/fund/Vector-360.svg");
       }
     }
   }
@@ -209,7 +209,7 @@
   }
 
   .af-line{
-    background-image: url("../../assets/fund/af-line/Vector\ 11.svg");
+    background-image: url("./assets/fund/af-line/Vector\ 11.svg");
     background-repeat: no-repeat;
     height: 3%;
     width: 70%;
