@@ -161,7 +161,7 @@ html, body {
     position: relative;
     left: -7px;
 
-    .slide {
+    .slide-item {
       width: 159px; 
       border: 1px solid $bg-color-green;
       border-radius: 40px;
@@ -184,7 +184,7 @@ html, body {
     margin: auto;
     margin-top: 2%;
 
-    .dot {
+    .dot-paiment-item {
       display: inline-block;
       width: 24px; 
       height: 24px; 

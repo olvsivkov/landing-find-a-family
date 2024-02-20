@@ -1,13 +1,13 @@
 .donate{
   max-width: 1920px;
-  background-image: url(./assets/donate/Vector.png);
+  background-image: url(../../assets/donate/Vector.png);
   background-repeat: no-repeat;
   margin: auto;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 1000px){
-    background-image: url(./assets/donate/Vector-1000.svg);
+    background-image: url(../../assets/donate/Vector-1000.svg);
   }
 
 
@@ -69,11 +69,11 @@
 
     .donate-title {
       @include block-title();
-      background-image: url("./assets/fund/Vector-1.svg");
+      background-image: url("../../assets/fund/Vector-1.svg");
       width: 300px;
 
       @media (max-width: 639px){
-        background-image: url("./assets/fund/Vector-360.svg");
+        background-image: url("../../assets/fund/Vector-360.svg");
         height: 150px;
         font-size: 46px;
         width: 50%;

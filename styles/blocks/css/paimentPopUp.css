@@ -1,0 +1,35 @@
+.pop-up-paiment {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(115, 176, 100, 0.61);
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+  z-index: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pop-up-paiment .pop-up-inner {
+  position: relative;
+  width: 900px;
+}
+.pop-up-paiment .pop-up-inner:hover {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.modal-show {
+  visibility: visible;
+  opacity: 100;
+}

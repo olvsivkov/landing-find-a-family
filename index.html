@@ -8,6 +8,7 @@
   <title>8 march</title>
 </head>
 <body>
+
   <header class="header">
     <div class="header-content">
       <img class="found-logo" src="./assets/header/Logotip.svg" alt="The foundations logo">
@@ -158,6 +159,76 @@
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
+
+        <!-- Форма оплаты popup-->
+        
+        <div class="pop-up-paiment">
+          <div class="pop-up-inner">
+            <form id="donationForm" method="POST" action="URL серверного скрипта">
+              <div class="payment-block">
+                <div class="paiment-block-wrapper">
+                  <img src="./assets/popup/Vector (Stroke).svg" alt="close btn">
+                  <h4>Оплата открытки</h4>
+                  <p>Вы получите открытку сразу на указанный e-mail и в течение суток на WhatsApp</p>
+                  <div class="choose-sum-wrap">
+                    <div id="pay-active" class="sum-item">300 &#x20bd</div>
+                    <form>
+                      <input class="sum-item input" type="text" id="sum" name="sum" placeholder="Другая сумма">
+                    </form>
+                  </div>
+                  <div class="pay-slider">
+                    <div class="slide-wrap">
+                      <div class="slide">
+                        <img src="./assets/donate/slider/Frame 92.svg" alt="card">
+                        <p>Банковская карта</p>
+                      </div>
+                      <div class="slide">
+                        <img src="./assets/donate/slider/Frame 76.svg" alt="SBP pay">
+                        <p>СБП платеж</p>
+                      </div>
+                      <div class="slide">
+                        <img src="./assets/donate/slider/Frame 76-mob.svg" alt="mobile pay">
+                        <p>Мобильный платеж</p>
+                      </div>
+                      <div class="slide">
+                        <img src="./assets/donate/slider/загрузка (4).svg" alt="yandex pay">
+                        <p>Yandex Pay</p>
+                      </div>
+                      <div class="slide">
+                        <img src="./assets/donate/slider/Frame 76 (1).svg" alt="requisites">
+                        <p>По реквизитам</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="dots-pay">
+                    <span class="dot-popup dot-active" onclick="showSlides(0)"></span>
+                    <span class="dot-popup" onclick="showSlides(1)"></span>
+                    <span class="dot-popup" onclick="showSlides(2)"></span>
+                  </div>
+                  <form>
+                    <input class="pay-input-form" type="text" id="name" name="name" placeholder="Имя">
+                    <input class="pay-input-form" type="email" id="email" name="email" placeholder="Электронная почта">
+                    <input class="pay-input-form" type="text" id="comment" name="comment" placeholder="Комментарий">
+                    <input class="pay-form-submit" type="submit" value="Отправить">
+                    <div class="form-checkbox">
+                      <label class="pay-checkbox-text" for="myCheckbox">
+                        <input class="pay-checkbox-popup" type="checkbox" id="myCheckbox" name="myCheckbox" value="true">
+                      Принимаю оферту сервиса и условия обработки персональных данных
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="second-popup">
+          <div class="second-popup-content">
+            <p>Оплата прошла успешно!</p>
+          </div>
+        </div>
+
     </section>
     <section id="aboutFund" class="about-fund">
         <div class="about-fund-wrapper">
@@ -227,67 +298,69 @@
             <p>Напишите нам</p>
             <img src="./assets/donate/Exclude.svg" alt="green arrow" onclick="openEmail()">
           </div>
-          <div class="payment-block">
-            <div class="paiment-block-wrapper">
-              <div class="help-field">
-                <div id="pay-active" class="one-time">Помочь разово</div>
-                <div class="mounthly">Помогать ежемесячно</div>
-              </div>
-              <div class="under-help-field">
-                Ваша поддержка очень важна для нашей организации и поможет
-                нам продолжить нашу деятельность
-              </div>
-              <div class="choose-sum-wrap">
-                <div id="pay-active" class="sum-item">300 &#x20bd</div>
-                <div class="sum-item">500 &#x20bd</div>
-                <div class="sum-item">1000 &#x20bd</div>
+          <form id="donationForm" method="POST" action="URL серверного скрипта">
+            <div class="payment-block">
+              <div class="paiment-block-wrapper">
+                <div class="help-field">
+                  <div id="pay-active" class="one-time">Помочь разово</div>
+                  <div class="mounthly">Помогать ежемесячно</div>
+                </div>
+                <div class="under-help-field">
+                  Ваша поддержка очень важна для нашей организации и поможет
+                  нам продолжить нашу деятельность
+                </div>
+                <div class="choose-sum-wrap">
+                  <div id="pay-active" class="sum-item">300 &#x20bd</div>
+                  <div class="sum-item">500 &#x20bd</div>
+                  <div class="sum-item">1000 &#x20bd</div>
+                  <form>
+                    <input class="sum-item input" type="text" id="sum" name="sum" placeholder="Другая сумма">
+                  </form>
+                </div>
+                <div class="pay-slider">
+                  <div class="slide-wrap">
+                    <div class="slide-item">
+                      <img src="./assets/donate/slider/Frame 92.svg" alt="card">
+                      <p>Банковская карта</p>
+                    </div>
+                    <div class="slide-item">
+                      <img src="./assets/donate/slider/Frame 76.svg" alt="SBP pay">
+                      <p>СБП платеж</p>
+                    </div>
+                    <div class="slide-item">
+                      <img src="./assets/donate/slider/Frame 76-mob.svg" alt="mobile pay">
+                      <p>Мобильный платеж</p>
+                    </div>
+                    <div class="slide-item">
+                      <img src="./assets/donate/slider/загрузка (4).svg" alt="yandex pay">
+                      <p>Yandex Pay</p>
+                    </div>
+                    <div class="slide-item">
+                      <img src="./assets/donate/slider/Frame 76 (1).svg" alt="requisites">
+                      <p>По реквизитам</p>
+                    </div>
+                  </div>
+                  <div class="dots">
+                    <span class="dot-paiment-item dot-active" onclick="showSlides(0)"></span>
+                    <span class="dot-paiment-item" onclick="showSlides(1)"></span>
+                    <span class="dot-paiment-item" onclick="showSlides(2)"></span>
+                  </div>
+                </div>
                 <form>
-                  <input class="sum-item input" type="text" id="sum" name="sum" placeholder="Другая сумма">
+                  <input class="pay-input-form" type="text" id="name" name="name" placeholder="Имя">
+                  <input class="pay-input-form" type="email" id="email" name="email" placeholder="Электронная почта">
+                  <input class="pay-input-form" type="text" id="comment" name="comment" placeholder="Комментарий">
+                  <input class="pay-form-submit" type="submit" value="Отправить">
+                  <div class="form-checkbox">
+                    <label class="pay-checkbox-text" for="myCheckbox">
+                      <input class="pay-checkbox" type="checkbox" id="myCheckbox" name="myCheckbox" value="true">
+                    Принимаю оферту сервиса и условия обработки персональных данных
+                    </label>
+                  </div>
                 </form>
               </div>
-              <div class="pay-slider">
-                <div class="slide-wrap">
-                  <div class="slide">
-                    <img src="./assets/donate/slider/Frame 92.svg" alt="card">
-                    <p>Банковская карта</p>
-                  </div>
-                  <div class="slide">
-                    <img src="./assets/donate/slider/Frame 76.svg" alt="SBP pay">
-                    <p>СБП платеж</p>
-                  </div>
-                  <div class="slide">
-                    <img src="./assets/donate/slider/Frame 76-mob.svg" alt="mobile pay">
-                    <p>Мобильный платеж</p>
-                  </div>
-                  <div class="slide">
-                    <img src="./assets/donate/slider/загрузка (4).svg" alt="yandex pay">
-                    <p>Yandex Pay</p>
-                  </div>
-                  <div class="slide">
-                    <img src="./assets/donate/slider/Frame 76 (1).svg" alt="requisites">
-                    <p>По реквизитам</p>
-                  </div>
-                </div>
-                <div class="dots">
-                  <span class="dot dot-active" onclick="showSlides(0)"></span>
-                  <span class="dot" onclick="showSlides(1)"></span>
-                  <span class="dot" onclick="showSlides(2)"></span>
-                </div>
-              </div>
-              <form>
-                <input class="pay-input-form" type="text" id="name" name="name" placeholder="Имя">
-                <input class="pay-input-form" type="email" id="email" name="email" placeholder="Электронная почта">
-                <input class="pay-input-form" type="text" id="comment" name="comment" placeholder="Комментарий">
-                <input class="pay-form-submit" type="submit" value="Отправить">
-                <div class="form-checkbox">
-                  <label class="pay-checkbox-text" for="myCheckbox">
-                    <input class="pay-checkbox" type="checkbox" id="myCheckbox" name="myCheckbox" value="true">
-                  Принимаю оферту сервиса и условия обработки персональных данных
-                  </label>
-                </div>
-              </form>
             </div>
-          </div>
+        </form>
           <img src="./assets/donate/Group 51.svg" alt="sun">
         </div>
       </div>
@@ -351,5 +424,6 @@
   </footer>
   <script src="./script/burgerMenu.js"></script>
   <script src="./script/paimentBlock.js"></script>
+  <script src="./script/popUp.js"></script>
 </body>
 </html>

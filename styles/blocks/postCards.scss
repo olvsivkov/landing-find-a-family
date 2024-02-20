@@ -2,7 +2,7 @@
   max-width: 1920px;
   margin: auto;
   background-color: $bg-color-light-green;
-  background-image: url("./assets/postcards/AdobeStock_58137\ 1858\ 1.svg");
+  background-image: url("../../assets/postcards/AdobeStock_58137\ 1858\ 1.svg");
   padding-top: 90px;
   position: relative;
   overflow: hidden;
@@ -25,7 +25,7 @@
     background-image: none;
 
     .left-flower {
-      background-image: url("./assets/postcards/AdobeStock_5813718\ 60-left_flower.svg");
+      background-image: url("../../assets/postcards/AdobeStock_5813718\ 60-left_flower.svg");
       width: 173px;
       height: 2265px;
       position: absolute;
@@ -36,7 +36,7 @@
     }
 
     .right-flower {
-      background-image: url("./assets/postcards/AdobeStock_5813718\ 59-right-flower.svg");
+      background-image: url("../../assets/postcards/AdobeStock_5813718\ 59-right-flower.svg");
       width: 173px;
       height: 2265px;
       position: absolute;
@@ -64,7 +64,7 @@
 
   .postcards-title {
     @include block-title();
-    background-image: url("./assets/postcards/Vector.svg");
+    background-image: url("../../assets/postcards/Vector.svg");
 
     @media (max-width: 769px){
       width: 50%;
@@ -165,7 +165,7 @@
 
       .first-item {
         background-color: $bg-color-light-green;
-        background-image: url("./assets/postcards/Group_118.svg");
+        background-image: url("../../assets/postcards/Group_118.svg");
         background-repeat: no-repeat;
         height: 70%;
         width: 70%;
@@ -251,40 +251,40 @@
         }
 
         .choose-card-1{
-          background-image: url("./assets/postcards/card-1/Group\ 140.svg");
+          background-image: url("../../assets/postcards/card-1/Group\ 140.svg");
         }
         .arrow-card-1{
-          background-image: url(./assets/postcards/card-1/Frame\ 123.svg);
+          background-image: url(../../assets/postcards/card-1/Frame\ 123.svg);
         }
 
         .choose-card-2{
-          background-image: url("./assets/postcards/card-2/Group\ 140.svg");
+          background-image: url("../../assets/postcards/card-2/Group\ 140.svg");
         }
         .arrow-card-2{
-          background-image: url(./assets/postcards/card-2/Group\ 141.svg);
+          background-image: url(../../assets/postcards/card-2/Group\ 141.svg);
           margin-left: 50%;
         }
 
         .choose-card-3{
-          background-image: url("./assets/postcards/card-3/Group\ 140.svg");
+          background-image: url("../../assets/postcards/card-3/Group\ 140.svg");
         }
         .arrow-card-3{
-          background-image: url(./assets/postcards/card-3/Group\ 141.svg);
+          background-image: url(../../assets/postcards/card-3/Group\ 141.svg);
         }
 
         .choose-card-4{
-          background-image: url("./assets/postcards/card-4/Group\ 140.svg");
+          background-image: url("../../assets/postcards/card-4/Group\ 140.svg");
         }
         .arrow-card-4{
-          background-image: url(./assets/postcards/card-4/Group\ 141.svg);
+          background-image: url(../../assets/postcards/card-4/Group\ 141.svg);
           margin-left: 50%;
         }
 
         .choose-card-5{
-          background-image: url("./assets/postcards/card-5/Group\ 140.svg");
+          background-image: url("../../assets/postcards/card-5/Group\ 140.svg");
         }
         .arrow-card-5{
-          background-image: url(./assets/postcards/card-5/Group\ 141.svg);
+          background-image: url(../../assets/postcards/card-5/Group\ 141.svg);
         }
       }
 

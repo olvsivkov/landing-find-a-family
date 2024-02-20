@@ -1,7 +1,7 @@
 // слайдер и стили точек
 
-let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot');
+let slides = document.querySelectorAll('.slide-item');
+let dots = document.querySelectorAll('.dot-paiment-item');
 
 function showSlides(slideIndex = 0) {
   for (let i = 0; i < slides.length; i++) {
