@@ -35,6 +35,12 @@ html, body {
   right: 4rem;
   padding: 4px;
 }
+@media (max-width: 639px) {
+  .hamburger {
+    top: 1rem;
+    right: 1rem;
+  }
+}
 
 /*-----*/
 .hamburger {
@@ -165,8 +171,8 @@ html, body {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
-.payment-block {
-  max-width: 563px;
+.payment-block-popup {
+  width: 563px;
   height: 802px;
   background-color: #ffffff;
   border-radius: 40px;
@@ -175,12 +181,12 @@ html, body {
   align-items: center;
 }
 @media (max-width: 639px) {
-  .payment-block {
+  .payment-block-popup {
     width: 99%;
     overflow: hidden;
   }
 }
-.payment-block .paiment-block-wrapper {
+.payment-block-popup .paiment-block-wrapper-popup {
   width: 95%;
   height: 88%;
   display: flex;
@@ -190,13 +196,13 @@ html, body {
   align-items: center;
   position: relative;
 }
-.payment-block .paiment-block-wrapper > img {
+.payment-block-popup .paiment-block-wrapper-popup > img {
   position: absolute;
   right: 9%;
   top: -3%;
   cursor: pointer;
 }
-.payment-block .paiment-block-wrapper h4 {
+.payment-block-popup .paiment-block-wrapper-popup h4 {
   font-family: "TT Norms Pro", sans-serif;
   color: #414141;
   font-size: 28px;
@@ -206,7 +212,7 @@ html, body {
   text-align: left;
   margin: 0;
 }
-.payment-block .paiment-block-wrapper > p {
+.payment-block-popup .paiment-block-wrapper-popup > p {
   font-family: "TT Norms Pro", sans-serif;
   color: #C1BFBF;
   font-size: 18px;
@@ -215,7 +221,7 @@ html, body {
   letter-spacing: 0.01em;
   text-align: left;
 }
-.payment-block .paiment-block-wrapper .choose-sum-wrap {
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -223,12 +229,12 @@ html, body {
   height: 56px;
 }
 @media (max-width: 639px) {
-  .payment-block .paiment-block-wrapper .choose-sum-wrap {
+  .payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup {
     width: 100%;
     height: auto;
   }
 }
-.payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .sum-item-popup {
   padding: 16px 22px 16px 22px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -242,32 +248,32 @@ html, body {
   flex: 1;
 }
 @media (max-width: 639px) {
-  .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+  .payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .sum-item-popup {
     padding: 16px 20px 16px 20px;
   }
 }
-.payment-block .paiment-block-wrapper .choose-sum-wrap .input {
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input {
   width: 130px;
   cursor: auto;
 }
-.payment-block .paiment-block-wrapper .choose-sum-wrap .input::placeholder {
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input::placeholder {
   color: #A0A0A0;
 }
-.payment-block .paiment-block-wrapper .choose-sum-wrap .input:focus::placeholder {
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input:focus::placeholder {
   color: transparent;
 }
-.payment-block .paiment-block-wrapper .pay-slider {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider {
   width: 499px;
   overflow: hidden;
 }
-.payment-block .paiment-block-wrapper .pay-slider .slide-wrap {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide-wrap {
   display: flex;
   justify-content: flex-start;
   width: 836px;
   position: relative;
   left: -7px;
 }
-.payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide-item {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide-wrap .slide-item {
   width: 159px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -282,13 +288,13 @@ html, body {
   cursor: pointer;
   margin-left: 7px;
 }
-.payment-block .paiment-block-wrapper .pay-slider .dots {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots {
   height: 25px;
   width: 125px;
   margin: auto;
   margin-top: 2%;
 }
-.payment-block .paiment-block-wrapper .pay-slider .dots .dot-paiment-item {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots .dot-paiment-item {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -297,10 +303,10 @@ html, body {
   margin: 0 7px;
   cursor: pointer;
 }
-.payment-block .paiment-block-wrapper .pay-slider .dots .dot-active {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots .dot-active {
   background-color: #73B064;
 }
-.payment-block .paiment-block-wrapper .pay-slider .slide {
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide {
   width: 159px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -315,12 +321,12 @@ html, body {
   cursor: pointer;
   margin-left: 7px;
 }
-.payment-block .paiment-block-wrapper .dots-pay {
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay {
   height: 25px;
   margin: 0 auto;
   margin-top: 2%;
 }
-.payment-block .paiment-block-wrapper .dots-pay .dot-popup {
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay .dot-popup {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -329,10 +335,10 @@ html, body {
   margin: 0 7px;
   cursor: pointer;
 }
-.payment-block .paiment-block-wrapper .dots-pay .dot-active {
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay .dot-active {
   background-color: #73B064;
 }
-.payment-block .paiment-block-wrapper form .pay-input-form {
+.payment-block-popup .paiment-block-wrapper-popup form .pay-input-form-popup {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -351,10 +357,10 @@ html, body {
   letter-spacing: 0.01em;
   width: 100%;
 }
-.payment-block .paiment-block-wrapper form .pay-input-form:focus::placeholder {
+.payment-block-popup .paiment-block-wrapper-popup form .pay-input-form-popup:focus::placeholder {
   color: transparent;
 }
-.payment-block .paiment-block-wrapper form .pay-form-submit {
+.payment-block-popup .paiment-block-wrapper-popup form .pay-form-submit-popup {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -379,18 +385,18 @@ html, body {
   cursor: pointer;
   width: 100%;
 }
-.payment-block .paiment-block-wrapper form .pay-form-submit:focus::placeholder {
+.payment-block-popup .paiment-block-wrapper-popup form .pay-form-submit-popup:focus::placeholder {
   color: transparent;
 }
-.payment-block .paiment-block-wrapper form .form-checkbox {
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox {
   padding-left: 5%;
   cursor: none;
 }
-.payment-block .paiment-block-wrapper form .form-checkbox .pay-checkbox {
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox .pay-checkbox {
   width: 16px;
   height: 16px;
 }
-.payment-block .paiment-block-wrapper form .form-checkbox .pay-checkbox-text {
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox .pay-checkbox-text {
   font-family: "TT Norms Pro", sans-serif;
   color: #A0A0A0;
   font-size: 12px;
@@ -749,7 +755,7 @@ html, body {
 .three-cards {
   max-width: 1920px;
   margin: auto;
-  background-image: url("../..s/assets/three_cards/Vector.svg");
+  background-image: url("../../assets/three_cards/Vector.svg");
   background-color: #CFF9C5;
   min-height: 734px;
   display: flex;
@@ -964,6 +970,11 @@ html, body {
     width: 328px;
     height: 647px;
     flex-basis: auto;
+  }
+}
+@media (min-width: 638px) {
+  .postcards .postcards-wrapper .cards-item {
+    display: block;
   }
 }
 .postcards .postcards-wrapper .first-elem {
@@ -1777,7 +1788,12 @@ html, body {
 .donate .donate-wrap .donate-pay .send-letter > img {
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block {
+@media (max-width: 1358px) {
+  .donate .donate-wrap .donate-pay .painment-form {
+    order: 2;
+  }
+}
+.donate .donate-wrap .donate-pay .painment-form .payment-block {
   width: 563px;
   height: 802px;
   background-color: #ffffff;
@@ -1786,26 +1802,22 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 1358px) {
-  .donate .donate-wrap .donate-pay .payment-block {
-    order: 2;
-  }
-}
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block {
     width: 99%;
     overflow: hidden;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper {
   width: 95%;
   height: 88%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field {
   display: flex;
   flex-wrap: wrap;
   width: 499px;
@@ -1814,11 +1826,11 @@ html, body {
   border: 1px solid #73B064;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .one-time {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .one-time {
   width: 193px;
   padding: 16px 28px 16px 28px;
   border-radius: 56px;
@@ -1831,14 +1843,14 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .one-time {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .one-time {
     flex: 1;
     font-size: 12px;
     padding: 0;
     padding-top: 4%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .mounthly {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .mounthly {
   width: 193px;
   padding: 16px 28px 16px 28px;
   border-radius: 56px;
@@ -1851,14 +1863,14 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .mounthly {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .mounthly {
     flex: 1;
     font-size: 12px;
     padding: 0;
     padding-top: 4%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .under-help-field {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .under-help-field {
   white-space: pre-line;
   font-family: "TT Norms Pro", sans-serif;
   color: #A0A0A0;
@@ -1867,7 +1879,7 @@ html, body {
   position: relative;
   top: -2%;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1875,12 +1887,12 @@ html, body {
   height: 56px;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap {
     width: 100%;
     height: auto;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
   padding: 16px 22px 16px 22px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -1893,32 +1905,32 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
     padding: 16px 20px 16px 20px;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input {
   width: 130px;
   cursor: auto;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input::placeholder {
   color: #A0A0A0;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input:focus::placeholder {
   color: transparent;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider {
   width: 499px;
   overflow: hidden;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .slide-wrap {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .slide-wrap {
   display: flex;
   justify-content: flex-start;
   width: 836px;
   position: relative;
   left: -7px;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide-item {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide-item {
   width: 159px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -1933,13 +1945,13 @@ html, body {
   cursor: pointer;
   margin-left: 7px;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots {
   height: 25px;
   width: 125px;
   margin: auto;
   margin-top: 2%;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots .dot-paiment-item {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots .dot-paiment-item {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -1948,10 +1960,10 @@ html, body {
   margin: 0 7px;
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots .dot-active {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots .dot-active {
   background-color: #73B064;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-input-form {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -1969,15 +1981,15 @@ html, body {
   line-height: 17px;
   letter-spacing: 0.01em;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-input-form:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form:focus::placeholder {
   color: transparent;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block form .pay-input-form {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-form-submit {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -2001,23 +2013,23 @@ html, body {
   color: #ffffff;
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-form-submit:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit:focus::placeholder {
   color: transparent;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block form .pay-form-submit {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox {
   padding-left: 5%;
   cursor: none;
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox .pay-checkbox {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox .pay-checkbox {
   width: 16px;
   height: 16px;
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox .pay-checkbox-text {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox .pay-checkbox-text {
   font-family: "TT Norms Pro", sans-serif;
   color: #A0A0A0;
   font-size: 12px;

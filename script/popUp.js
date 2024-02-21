@@ -2,7 +2,7 @@
 
 const postCardBTN = document.querySelectorAll('.postcard-btn')
 const popupVisible = document.querySelector('.pop-up-paiment')
-const closePopupBTN = document.querySelector('.paiment-block-wrapper>img')
+const closePopupBTN = document.querySelector('.paiment-block-wrapper-popup>img')
 
 postCardBTN.forEach(element => element.addEventListener("click", function(e) {
   e.preventDefault();
@@ -15,7 +15,7 @@ closePopupBTN.addEventListener("click", function(e) {
 
 // второй попап
 
-const submitBTN = document.querySelector(".pay-form-submit")
+const submitBTN = document.querySelector(".pay-form-submit-popup")
 const secondPopup = document.querySelector(".second-popup")
 
 submitBTN.addEventListener("click", function(e) {
@@ -32,7 +32,7 @@ submitBTN.addEventListener("click", function(e) {
 let popupSlides = document.querySelectorAll('.slide');
 let popupDots = document.querySelectorAll('.dot-popup');
 
-function showSlides(slideIndex = 0) {
+function showSlidesPopup(slideIndex = 0) {
   for (let i = 0; i < popupSlides.length; i++) {
     if (i === slideIndex || i === slideIndex + 1 || i === slideIndex + 2) {
       popupSlides[i].style.display = 'block';

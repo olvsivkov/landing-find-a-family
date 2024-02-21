@@ -36,8 +36,8 @@
 
 
 
-.payment-block {
-  max-width: 563px;
+.payment-block-popup {
+  width: 563px;
   height: 802px;
   background-color: $text-color-white;
   border-radius: 40px;
@@ -50,7 +50,7 @@
     overflow: hidden;
   }
 
-  .paiment-block-wrapper{
+  .paiment-block-wrapper-popup{
     width: 95%;
     height: 88%;
     display: flex;
@@ -88,7 +88,7 @@
         text-align: left;
       }
 
-      .choose-sum-wrap{
+      .choose-sum-wrap-popup{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -100,7 +100,7 @@
           height: auto;      
         }
       
-        .sum-item{
+        .sum-item-popup{
           padding: 16px 22px 16px 22px;
           border: 1px solid $bg-color-green;
           border-radius: 40px;
@@ -174,11 +174,11 @@
 
       form{
 
-        .pay-input-form{
+        .pay-input-form-popup{
           @include pay-input-form();
           width: 100%;
         }
-        .pay-form-submit{
+        .pay-form-submit-popup{
           @include pay-input-form();
           @include pay-active();
           cursor: pointer;

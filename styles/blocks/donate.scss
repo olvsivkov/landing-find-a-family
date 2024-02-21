@@ -215,153 +215,158 @@
           cursor: pointer;
         }
       }
-      .payment-block{
-        width: 563px;
-        height: 802px;
-        background-color: $text-color-white;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+
+      .painment-form {
         @media (max-width: 1358px){
           order: 2;
         }
 
-        @media (max-width: 639px){
-          width: 99%;
-          overflow: hidden;
-        }
-
-        .paiment-block-wrapper{
-          width: 95%;
-          height: 88%;
+        .payment-block{
+          width: 563px;
+          height: 802px;
+          background-color: $text-color-white;
+          border-radius: 40px;
           display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-
-          .help-field{
-            display: flex;
-            flex-wrap: wrap;
-            width: 499px;
-            height: 56px;
-            border-radius: 40px;
-            border: 1px solid $bg-color-green;
-
-            @media (max-width: 639px){
-              width: 100%;
-            }
-
-            .one-time{
-              @include help-field-block();
-
-              @media (max-width: 639px){
-                flex: 1;
-                font-size: 12px;
-                padding: 0;
-                padding-top: 4%;
-              }
-
-            }
-            .mounthly{
-              @include help-field-block();
-
-              @media (max-width: 639px){
-                flex: 1;
-                font-size: 12px;
-                padding: 0;
-                padding-top: 4%;
-              }
-
-            }
-          }
-          .under-help-field{
-            white-space: pre-line;
-            font-family: $text-norms-pro;
-            color: $text-color-placeholder;
-            font-size: 12px;
-            padding-left: 5%;
-            position: relative;
-            top: -2%
-          }
-
-          .choose-sum-wrap{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 499px;
-            height: 56px;
-
-            @media (max-width: 639px){
-              width: 100%;      
-              height: auto;      
-            }
+          justify-content: center;
+          align-items: center;
           
-            .sum-item{
-              padding: 16px 22px 16px 22px;
-              border: 1px solid $bg-color-green;
+  
+          @media (max-width: 639px){
+            width: 99%;
+            overflow: hidden;
+          }
+  
+          .paiment-block-wrapper{
+            width: 95%;
+            height: 88%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+  
+            .help-field{
+              display: flex;
+              flex-wrap: wrap;
+              width: 499px;
+              height: 56px;
               border-radius: 40px;
+              border: 1px solid $bg-color-green;
+  
+              @media (max-width: 639px){
+                width: 100%;
+              }
+  
+              .one-time{
+                @include help-field-block();
+  
+                @media (max-width: 639px){
+                  flex: 1;
+                  font-size: 12px;
+                  padding: 0;
+                  padding-top: 4%;
+                }
+  
+              }
+              .mounthly{
+                @include help-field-block();
+  
+                @media (max-width: 639px){
+                  flex: 1;
+                  font-size: 12px;
+                  padding: 0;
+                  padding-top: 4%;
+                }
+  
+              }
+            }
+            .under-help-field{
+              white-space: pre-line;
               font-family: $text-norms-pro;
               color: $text-color-placeholder;
-              font-size: 18px;
-              line-height: 22px;
-              letter-spacing: 0.01em;
-              text-align: center;
-              cursor: pointer;
-
+              font-size: 12px;
+              padding-left: 5%;
+              position: relative;
+              top: -2%
+            }
+  
+            .choose-sum-wrap{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              width: 499px;
+              height: 56px;
+  
               @media (max-width: 639px){
-                padding: 16px 20px 16px 20px;          
+                width: 100%;      
+                height: auto;      
               }
-            }
-
-            .input {
-              width: 130px;
-              cursor: auto;
-
-              &::placeholder {
+            
+              .sum-item{
+                padding: 16px 22px 16px 22px;
+                border: 1px solid $bg-color-green;
+                border-radius: 40px;
+                font-family: $text-norms-pro;
                 color: $text-color-placeholder;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                text-align: center;
+                cursor: pointer;
+  
+                @media (max-width: 639px){
+                  padding: 16px 20px 16px 20px;          
+                }
               }
-
-              &:focus::placeholder {
-                color: transparent;
+  
+              .input {
+                width: 130px;
+                cursor: auto;
+  
+                &::placeholder {
+                  color: $text-color-placeholder;
+                }
+  
+                &:focus::placeholder {
+                  color: transparent;
+                }
               }
             }
-          }
-
-          .pay-slider {
-           @include pay-slider();
-          }
-        }
-
-        form{
-
-          .pay-input-form{
-            @include pay-input-form();
-
-            @media (max-width: 639px){
-              width: 100%;            
+  
+            .pay-slider {
+             @include pay-slider();
             }
           }
-          .pay-form-submit{
-            @include pay-input-form();
-            @include pay-active();
-            cursor: pointer;
-
-            @media (max-width: 639px){
-              width: 100%;            
+  
+  
+            .pay-input-form{
+              @include pay-input-form();
+  
+              @media (max-width: 639px){
+                width: 100%;            
+              }
             }
-          }
-          .form-checkbox{
-            @include pay-checkbox(); 
-            padding-left: 5%;
-            cursor: none;
-          }
+            .pay-form-submit{
+              @include pay-input-form();
+              @include pay-active();
+              cursor: pointer;
+  
+              @media (max-width: 639px){
+                width: 100%;            
+              }
+            }
+            .form-checkbox{
+              @include pay-checkbox(); 
+              padding-left: 5%;
+              cursor: none;
+            }
         }
       }
+
     }
   }
 }
+
 
 #pay-active {
 @include pay-active();
