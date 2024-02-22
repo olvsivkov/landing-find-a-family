@@ -68,10 +68,6 @@
       padding-bottom: 0;
     }
 
-    @media (max-width: 639px){
-      align-items: normal;
-    }
-
     .af-pic-1{
       @include af-pic(); 
 
@@ -118,9 +114,6 @@
       padding-bottom: 0;
     }
 
-    @media (max-width: 639px){
-      align-items: normal;
-    }
 
     .af-text-2{
       @include af-text();
@@ -175,9 +168,6 @@
       padding-bottom: 0;
     }
 
-    @media (max-width: 639px){
-      align-items: normal;
-    }
 
     .af-pic-3{
       @include af-pic();

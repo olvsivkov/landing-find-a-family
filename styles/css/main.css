@@ -28,6 +28,438 @@ html, body {
   padding: 0;
 }
 
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 4rem;
+  right: 4rem;
+  padding: 4px;
+}
+@media (max-width: 639px) {
+  .hamburger {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/*-----*/
+.hamburger {
+  width: 86px;
+  height: 86px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  user-select: none;
+  position: fixed;
+  z-index: 100;
+  padding: 4px;
+  background-image: url("../../assets/hamburgerMenu/Vector-HM-open.svg");
+}
+@media (max-width: 800px) {
+  .hamburger {
+    background-image: url("../../assets/hamburgerMenu/Burger_menu_800.svg");
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.open {
+  background-image: url("../../assets/hamburgerMenu/Vector (Stroke).svg");
+  width: 28px;
+  height: 28px;
+  border-radius: 40px;
+  background-size: cover;
+  border: 10px solid #FFE49F;
+}
+.open:hover {
+  background-color: #FFF8E3;
+  border: 10px solid #FFF8E3;
+}
+
+/*-----*/
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #FFE49F;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+@media (max-width: 1000px) {
+  .menu {
+    left: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .menu {
+    left: 0;
+  }
+}
+.menu .nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+  padding: 10%;
+  height: 30%;
+}
+.menu .nav-list > li, .menu .nav-list a {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Shantell Sans", cursive, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #414141;
+}
+.menu .nav-list > li:hover, .menu .nav-list a:hover {
+  color: #73B064;
+}
+.menu .nav-list .menu-items {
+  transition: transform 0.2s;
+  top: 0;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #FFE49F;
+  color: white;
+  list-style: none;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.pop-up-paiment {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(115, 176, 100, 0.61);
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+  z-index: 2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.pop-up-paiment .pop-up-inner {
+  position: relative;
+  width: 100%;
+  max-width: 563px;
+}
+.pop-up-paiment .pop-up-inner:hover {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.payment-block-popup {
+  width: 563px;
+  height: 802px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 639px) {
+  .payment-block-popup {
+    width: 99%;
+    overflow: hidden;
+  }
+}
+.payment-block-popup .paiment-block-wrapper-popup {
+  width: 95%;
+  height: 88%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.payment-block-popup .paiment-block-wrapper-popup > img {
+  position: absolute;
+  right: 9%;
+  top: -3%;
+  cursor: pointer;
+}
+.payment-block-popup .paiment-block-wrapper-popup h4 {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin: 0;
+}
+.payment-block-popup .paiment-block-wrapper-popup > p {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #C1BFBF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 499px;
+  height: 56px;
+}
+@media (max-width: 639px) {
+  .payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup {
+    width: 100%;
+    height: auto;
+  }
+}
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .sum-item-popup {
+  padding: 16px 22px 16px 22px;
+  border: 1px solid #73B064;
+  border-radius: 40px;
+  font-family: "TT Norms Pro", sans-serif;
+  color: #A0A0A0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+}
+@media (max-width: 639px) {
+  .payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .sum-item-popup {
+    padding: 16px 20px 16px 20px;
+  }
+}
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input {
+  width: 130px;
+  cursor: auto;
+}
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input::placeholder {
+  color: #A0A0A0;
+}
+.payment-block-popup .paiment-block-wrapper-popup .choose-sum-wrap-popup .input:focus::placeholder {
+  color: transparent;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider {
+  width: 499px;
+  overflow: hidden;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide-wrap {
+  display: flex;
+  justify-content: flex-start;
+  width: 836px;
+  position: relative;
+  left: -7px;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide-wrap .slide-item {
+  width: 159px;
+  border: 1px solid #73B064;
+  border-radius: 40px;
+  text-align: center;
+  padding: 1% 0;
+  color: #A0A0A0;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  margin-left: 7px;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots {
+  height: 25px;
+  width: 125px;
+  margin: auto;
+  margin-top: 2%;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots .dot-paiment-item {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #C0EAB5;
+  border-radius: 50%;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .dots .dot-active {
+  background-color: #73B064;
+}
+.payment-block-popup .paiment-block-wrapper-popup .pay-slider .slide {
+  width: 159px;
+  border: 1px solid #73B064;
+  border-radius: 40px;
+  text-align: center;
+  padding: 1% 0;
+  color: #A0A0A0;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  margin-left: 7px;
+}
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay {
+  height: 25px;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay .dot-popup {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #C0EAB5;
+  border-radius: 50%;
+  margin: 0 7px;
+  cursor: pointer;
+}
+.payment-block-popup .paiment-block-wrapper-popup .dots-pay .dot-active {
+  background-color: #73B064;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .pay-input-form-popup {
+  width: 499px;
+  height: 66px;
+  padding: 20px 32px;
+  border-radius: 40px;
+  border: 2px solid;
+  margin-bottom: 8px;
+  border: 1px solid #73B064;
+  border-radius: 40px;
+  text-align: center;
+  padding: 1% 0;
+  color: #A0A0A0;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  width: 100%;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .pay-input-form-popup:focus::placeholder {
+  color: transparent;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .pay-form-submit-popup {
+  width: 499px;
+  height: 66px;
+  padding: 20px 32px;
+  border-radius: 40px;
+  border: 2px solid;
+  margin-bottom: 8px;
+  border: 1px solid #73B064;
+  border-radius: 40px;
+  text-align: center;
+  padding: 1% 0;
+  color: #A0A0A0;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  background-color: #73B064;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .pay-form-submit-popup:focus::placeholder {
+  color: transparent;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox {
+  padding-left: 5%;
+  cursor: none;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox .pay-checkbox {
+  width: 16px;
+  height: 16px;
+}
+.payment-block-popup .paiment-block-wrapper-popup form .form-checkbox .pay-checkbox-text {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #A0A0A0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+#pay-active {
+  background-color: #73B064;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.second-popup {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(115, 176, 100, 0.61);
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+  z-index: 2;
+}
+.second-popup .second-popup-content {
+  width: 563px;
+  height: 146px;
+  top: 467px;
+  left: 679px;
+  padding: 56px 32px 56px 32px;
+  border-radius: 40px;
+  gap: 16px;
+  background-color: #ffffff;
+}
+.second-popup .second-popup-content p {
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.modal-show {
+  visibility: visible;
+  opacity: 100;
+}
+
 .header {
   width: 100%;
   max-width: 1920px;
@@ -104,6 +536,9 @@ html, body {
   font-weight: 500;
   font-size: 24px;
   color: #414141;
+}
+.header .header-content .navigation .nav-list:hover {
+  color: #73B064;
 }
 .header .header-content .header-content-wrapper {
   display: flex;
@@ -233,7 +668,6 @@ html, body {
   }
 }
 .header .header-content .header-content-wrapper .text-content .choose-postcard-btn {
-  height: 63px;
   padding: 16px 32px 16px 32px;
   border: 1px solid #73B064;
   border-radius: 56px;
@@ -244,7 +678,11 @@ html, body {
   font-size: 26px;
   color: #ffffff;
   cursor: pointer;
-  display: inline;
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 292px;
 }
 .header .header-content .header-content-wrapper .text-content .choose-postcard-btn:hover {
   background-color: #F5B02B;
@@ -257,7 +695,6 @@ html, body {
 @media (max-width: 862px) {
   .header .header-content .header-content-wrapper .text-content .choose-postcard-btn {
     margin-top: 3%;
-    display: inline;
   }
 }
 @media (max-width: 639px) {
@@ -269,7 +706,7 @@ html, body {
     padding: 0;
     margin-top: 15%;
     font-size: 24px;
-    display: block;
+    line-height: 60px;
   }
 }
 .header .header-content .header-content-wrapper .image-content {
@@ -480,6 +917,20 @@ html, body {
     flex-direction: column;
     margin: auto;
   }
+}
+@media (max-width: 1355px) and (max-width: 769px) {
+  .postcards .postcards-wrapper {
+    width: 570px;
+  }
+}
+@media (max-width: 1355px) and (max-width: 638px) {
+  .postcards .postcards-wrapper {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1355px) {
   .postcards .postcards-wrapper .orange-cloud-1000 {
     display: block;
     position: absolute;
@@ -510,18 +961,6 @@ html, body {
     height: 128px;
   }
 }
-@media (max-width: 769px) {
-  .postcards .postcards-wrapper {
-    width: 570px;
-  }
-}
-@media (max-width: 638px) {
-  .postcards .postcards-wrapper {
-    width: 2000px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
 .postcards .postcards-wrapper .cards-item {
   flex-basis: 48%;
   margin: 5px;
@@ -535,6 +974,13 @@ html, body {
     width: 328px;
     height: 647px;
     flex-basis: auto;
+  }
+}
+@media (max-width: 638px) {
+  .postcards .postcards-wrapper .cards-item-slider {
+    max-width: 400px;
+    width: 95%;
+    margin: auto;
   }
 }
 .postcards .postcards-wrapper .first-elem {
@@ -566,12 +1012,18 @@ html, body {
   flex-wrap: wrap;
   padding-top: 10%;
 }
+.postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item img {
+  width: 178px;
+  height: 293px;
+  border: 3px solid #73B064;
+  border-radius: 20px;
+}
 @media (max-width: 638px) {
-  .postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item {
+  .postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item img {
     width: 178px;
     height: 293px;
     border-radius: 20px;
-    padding-bottom: 15%;
+    margin-bottom: 15%;
     order: 1;
   }
 }
@@ -782,7 +1234,7 @@ html, body {
 }
 @media (max-width: 639px) {
   .about-fund .af-first-block {
-    align-items: normal;
+    align-items: center;
   }
 }
 .about-fund .af-first-block .af-pic-1 {
@@ -1080,7 +1532,6 @@ html, body {
   }
 }
 .thanks-mom .thanks-mom-wrapper .mom-text > a > button {
-  height: 63px;
   padding: 16px 32px 16px 32px;
   border: 1px solid #73B064;
   border-radius: 56px;
@@ -1091,6 +1542,11 @@ html, body {
   font-size: 26px;
   color: #ffffff;
   cursor: pointer;
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 292px;
   margin-left: 30%;
   width: 292px;
   height: 63px;
@@ -1297,6 +1753,8 @@ html, body {
 @media (max-width: 639px) {
   .donate .donate-wrap .donate-pay .donate-pay-text > p {
     font-size: 24px;
+    padding: 0 0 0 7%;
+    width: 85%;
   }
 }
 .donate .donate-wrap .donate-pay .donate-pay-text > p > span {
@@ -1348,7 +1806,13 @@ html, body {
 .donate .donate-wrap .donate-pay .send-letter > img {
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block {
+@media (max-width: 1358px) {
+  .donate .donate-wrap .donate-pay .painment-form {
+    width: 100%;
+    order: 2;
+  }
+}
+.donate .donate-wrap .donate-pay .painment-form .payment-block {
   width: 563px;
   height: 802px;
   background-color: #ffffff;
@@ -1356,27 +1820,24 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 1358px) {
-  .donate .donate-wrap .donate-pay .payment-block {
-    order: 2;
-  }
+  margin: auto;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block {
     width: 99%;
     overflow: hidden;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper {
   width: 95%;
   height: 88%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field {
   display: flex;
   flex-wrap: wrap;
   width: 499px;
@@ -1385,11 +1846,11 @@ html, body {
   border: 1px solid #73B064;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .one-time {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .one-time {
   width: 193px;
   padding: 16px 28px 16px 28px;
   border-radius: 56px;
@@ -1402,14 +1863,14 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .one-time {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .one-time {
     flex: 1;
     font-size: 12px;
     padding: 0;
     padding-top: 4%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .mounthly {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .mounthly {
   width: 193px;
   padding: 16px 28px 16px 28px;
   border-radius: 56px;
@@ -1422,14 +1883,14 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .help-field .mounthly {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .help-field .mounthly {
     flex: 1;
     font-size: 12px;
     padding: 0;
     padding-top: 4%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .under-help-field {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .under-help-field {
   white-space: pre-line;
   font-family: "TT Norms Pro", sans-serif;
   color: #A0A0A0;
@@ -1438,7 +1899,7 @@ html, body {
   position: relative;
   top: -2%;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1446,12 +1907,12 @@ html, body {
   height: 56px;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap {
     width: 100%;
     height: auto;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
   padding: 16px 22px 16px 22px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -1464,32 +1925,32 @@ html, body {
   cursor: pointer;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .sum-item {
     padding: 16px 20px 16px 20px;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input {
   width: 130px;
   cursor: auto;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input::placeholder {
   color: #A0A0A0;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .choose-sum-wrap .input:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .choose-sum-wrap .input:focus::placeholder {
   color: transparent;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider {
   width: 499px;
   overflow: hidden;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .slide-wrap {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .slide-wrap {
   display: flex;
   justify-content: flex-start;
   width: 836px;
   position: relative;
   left: -7px;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .slide-wrap .slide-item {
   width: 159px;
   border: 1px solid #73B064;
   border-radius: 40px;
@@ -1504,13 +1965,13 @@ html, body {
   cursor: pointer;
   margin-left: 7px;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots {
   height: 25px;
   width: 125px;
   margin: auto;
   margin-top: 2%;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots .dot {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots .dot-paiment-item {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -1519,10 +1980,10 @@ html, body {
   margin: 0 7px;
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block .paiment-block-wrapper .pay-slider .dots .dot-active {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .paiment-block-wrapper .pay-slider .dots .dot-active {
   background-color: #73B064;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-input-form {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -1540,15 +2001,15 @@ html, body {
   line-height: 17px;
   letter-spacing: 0.01em;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-input-form:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form:focus::placeholder {
   color: transparent;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block form .pay-input-form {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .pay-input-form {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-form-submit {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit {
   width: 499px;
   height: 66px;
   padding: 20px 32px;
@@ -1572,23 +2033,23 @@ html, body {
   color: #ffffff;
   cursor: pointer;
 }
-.donate .donate-wrap .donate-pay .payment-block form .pay-form-submit:focus::placeholder {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit:focus::placeholder {
   color: transparent;
 }
 @media (max-width: 639px) {
-  .donate .donate-wrap .donate-pay .payment-block form .pay-form-submit {
+  .donate .donate-wrap .donate-pay .painment-form .payment-block .pay-form-submit {
     width: 100%;
   }
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox {
   padding-left: 5%;
   cursor: none;
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox .pay-checkbox {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox .pay-checkbox {
   width: 16px;
   height: 16px;
 }
-.donate .donate-wrap .donate-pay .payment-block form .form-checkbox .pay-checkbox-text {
+.donate .donate-wrap .donate-pay .painment-form .payment-block .form-checkbox .pay-checkbox-text {
   font-family: "TT Norms Pro", sans-serif;
   color: #A0A0A0;
   font-size: 12px;
@@ -1688,6 +2149,7 @@ html, body {
   flex-direction: row;
   height: 110px;
   padding: 7% 0;
+  user-select: text;
 }
 @media (max-width: 1100px) {
   .footer .find-family-wrapper .requisites-wrap {
