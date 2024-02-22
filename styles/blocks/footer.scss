@@ -85,6 +85,7 @@
       flex-direction: row;
       height: 110px;
       padding: 7% 0;
+      user-select: text;
 
       @media (max-width: 1100px){
         flex-direction: column;

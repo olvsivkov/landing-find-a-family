@@ -102,6 +102,17 @@
       flex-direction: column;
       margin: auto;
 
+    
+    @media (max-width: 769px){
+      width: 570px;
+    }
+  
+    @media (max-width: 638px){
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
       .orange-cloud-1000 {
         display:block;
         position: absolute;
@@ -130,15 +141,6 @@
       }
     }
 
-    @media (max-width: 769px){
-      width: 570px;
-    }
-
-    @media (max-width: 638px){
-      width: 2000px;
-      flex-direction: row;
-      justify-content: space-between;
-    }
 
     .cards-item {
       flex-basis: 48%;
@@ -153,8 +155,15 @@
         height: 647px;
         flex-basis: auto;
       }
+    }
 
+    .cards-item-slider {
 
+      @media (max-width: 638px){
+        max-width: 400px;
+        width: 95%;
+        margin: auto;
+      }
     }
 
     .first-elem{
@@ -190,12 +199,19 @@
       .postcard-item{
         //черно-белая открытка
 
-        @media (max-width: 638px) {
+        img {
           width: 178px;
           height: 293px;
+          border: 3px solid $bg-color-green;
           border-radius: 20px;
-          padding-bottom: 15%;
-          order: 1;
+
+          @media (max-width: 638px) {
+            width: 178px;
+            height: 293px;
+            border-radius: 20px;
+            margin-bottom: 15%;
+            order: 1;
+          }
         }
       }
 

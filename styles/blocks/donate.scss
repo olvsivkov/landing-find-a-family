@@ -163,6 +163,8 @@
 
           @media (max-width: 639px){
             font-size: 24px;
+            padding: 0 0 0 7%;
+            width: 85%;
           }
 
           &>span{
@@ -218,6 +220,7 @@
 
       .painment-form {
         @media (max-width: 1358px){
+          width: 100%;
           order: 2;
         }
 
@@ -229,6 +232,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          margin: auto;
           
   
           @media (max-width: 639px){
