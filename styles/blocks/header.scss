@@ -69,10 +69,10 @@
           font-weight: 500;
           font-size: 24px;
           color: $text-color;
-        }
-
-        &:hover {
-          color: $bg-color-green;
+          
+            &:hover {
+              color: $bg-color-green;
+            }
         }
       }
     }

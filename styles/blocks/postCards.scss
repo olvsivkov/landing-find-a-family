@@ -111,6 +111,7 @@
       width: 100%;
       flex-direction: row;
       justify-content: space-between;
+      padding-bottom: 30px;
     }
 
       .orange-cloud-1000 {
@@ -195,6 +196,7 @@
       justify-content: center;
       flex-wrap: wrap;
       padding-top: 10%;
+      cursor: pointer;
 
       .postcard-item{
         //черно-белая открытка
@@ -310,7 +312,48 @@
         margin-left: 9%;
       }
     }
+
+
+    
   }
+
+  @media (min-width: 638px) {
+    .direction-arrow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 637px) {
+    .direction-arrow{
+      width: 75%;
+      height: 55px;
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      justify-content: space-between;
+      padding-bottom: 20px;
+  
+      .custom-button{
+        margin-top:10px;
+        display:block;
+        padding: 10px 30px;
+        font-size: 26px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        background-color: $bg-color-green;
+        color: #fff;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: $color-orange;
+          }
+      }
+    }
+
+  }
+
 
 
   @media (min-width: 638px) {
