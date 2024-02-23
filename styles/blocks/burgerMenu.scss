@@ -1,8 +1,6 @@
 
 
 .hamburger {
-  position: fixed;
-  z-index: 100;
   top: 4rem;
   right: 4rem;
   padding: 4px;
@@ -23,7 +21,7 @@
   cursor: pointer;
   user-select: none;
   position: fixed;
-  z-index: 100;
+  z-index: 3;
   padding: 4px;
   background-image: url("../../assets/hamburgerMenu/Vector-HM-open.svg");
 

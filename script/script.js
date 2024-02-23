@@ -32,6 +32,7 @@ menuItems.forEach(menuItem => menuItem.addEventListener("click", toggleMenu));
 const openPayPopap = document.querySelectorAll('.cards-item-slider')
 const popupVisible = document.querySelector('.pop-up-paiment')
 const closePopupBTN = document.querySelector('.paiment-block-wrapper-popup>img')
+console.log(openPayPopap)
 
 openPayPopap.forEach(element => element.addEventListener("click", function(e) {
   e.preventDefault();
@@ -81,8 +82,6 @@ function showSlidesPopup(slideIndex = 0) {
 
 //----------------------------------------------------------------------------------
 // слайдер открыток при разрешении экрана 639 - 360px
-
-
 
 let cardsSlides = document.querySelectorAll('.cards-item-slider');
 let cardsDots = document.querySelectorAll('.dot-postcard');
