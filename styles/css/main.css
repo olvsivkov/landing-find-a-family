@@ -1118,7 +1118,7 @@ html, body {
   .postcards .direction-arrow {
     width: 100%;
     height: 155px;
-    top: 25%;
+    top: -25%;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -1129,16 +1129,18 @@ html, body {
   .postcards .direction-arrow .custom-button {
     margin-top: 10px;
     display: block;
-    padding: 30px 10px;
+    padding: 30px 15px;
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #73B064;
-    opacity: 0.6;
+    opacity: 0.5;
     color: #fff;
     transition: background-color 0.3s ease;
+    position: relative;
+    top: 250%;
   }
   .postcards .direction-arrow .custom-button:nth-child(1) {
     margin-left: 2%;
