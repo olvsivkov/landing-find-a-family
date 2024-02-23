@@ -29,8 +29,6 @@ html, body {
 }
 
 .hamburger {
-  position: fixed;
-  z-index: 100;
   top: 4rem;
   right: 4rem;
   padding: 4px;
@@ -50,7 +48,7 @@ html, body {
   cursor: pointer;
   user-select: none;
   position: fixed;
-  z-index: 100;
+  z-index: 3;
   padding: 4px;
   background-image: url("../../assets/hamburgerMenu/Vector-HM-open.svg");
 }
@@ -158,7 +156,7 @@ html, body {
   visibility: hidden;
   -webkit-transition: visibility 0s, opacity 0.5s;
   transition: visibility 0s, opacity 0.5s;
-  z-index: 2;
+  z-index: 4;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .pop-up-paiment .pop-up-inner {
@@ -1118,29 +1116,42 @@ html, body {
 }
 @media (max-width: 637px) {
   .postcards .direction-arrow {
-    width: 75%;
-    height: 55px;
+    width: 100%;
+    height: 155px;
+    top: 25%;
     display: flex;
     flex-direction: row;
     margin: auto;
     justify-content: space-between;
     padding-bottom: 20px;
+    position: absolute;
   }
   .postcards .direction-arrow .custom-button {
     margin-top: 10px;
     display: block;
-    padding: 10px 30px;
+    padding: 30px 10px;
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #73B064;
+    opacity: 0.6;
     color: #fff;
     transition: background-color 0.3s ease;
   }
+  .postcards .direction-arrow .custom-button:nth-child(1) {
+    margin-left: 2%;
+  }
+  .postcards .direction-arrow .custom-button:nth-child(2) {
+    margin-right: 2%;
+  }
   .postcards .direction-arrow .custom-button:hover {
     background-color: #F5B02B;
+  }
+  .postcards .direction-arrow .custom-button:active {
+    opacity: 1;
+    border: 2px solid #73B064;
   }
 }
 @media (min-width: 638px) {
