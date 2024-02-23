@@ -537,7 +537,7 @@ html, body {
   font-size: 24px;
   color: #414141;
 }
-.header .header-content .navigation .nav-list:hover {
+.header .header-content .navigation .nav-list > li:hover, .header .header-content .navigation .nav-list a:hover {
   color: #73B064;
 }
 .header .header-content .header-content-wrapper {
@@ -928,6 +928,7 @@ html, body {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 1355px) {
@@ -1011,6 +1012,7 @@ html, body {
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 10%;
+  cursor: pointer;
 }
 .postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-item img {
   width: 178px;
@@ -1108,6 +1110,38 @@ html, body {
 }
 .postcards .postcards-wrapper .cards-item-inner-wrapper .postcard-gap-left {
   margin-left: 9%;
+}
+@media (min-width: 638px) {
+  .postcards .direction-arrow {
+    display: none;
+  }
+}
+@media (max-width: 637px) {
+  .postcards .direction-arrow {
+    width: 75%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .postcards .direction-arrow .custom-button {
+    margin-top: 10px;
+    display: block;
+    padding: 10px 30px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #73B064;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  .postcards .direction-arrow .custom-button:hover {
+    background-color: #F5B02B;
+  }
 }
 @media (min-width: 638px) {
   .postcards .dots {
@@ -1232,11 +1266,6 @@ html, body {
     padding-bottom: 0;
   }
 }
-@media (max-width: 639px) {
-  .about-fund .af-first-block {
-    align-items: center;
-  }
-}
 .about-fund .af-first-block .af-pic-1 {
   background-repeat: no-repeat;
   height: 100%;
@@ -1297,11 +1326,6 @@ html, body {
     height: 500px;
     align-items: center;
     padding-bottom: 0;
-  }
-}
-@media (max-width: 639px) {
-  .about-fund .af-second-block {
-    align-items: normal;
   }
 }
 .about-fund .af-second-block .af-text-2 {
@@ -1372,11 +1396,6 @@ html, body {
     height: 500px;
     align-items: center;
     padding-bottom: 0;
-  }
-}
-@media (max-width: 639px) {
-  .about-fund .af-third-block {
-    align-items: normal;
   }
 }
 .about-fund .af-third-block .af-pic-3 {
@@ -2123,6 +2142,7 @@ html, body {
   user-select: none;
   width: 59px;
   height: 59px;
+  cursor: pointer;
 }
 .footer .find-family-wrapper .find-family-links .social-icons a:hover {
   background-color: #e0e0e0;
@@ -2210,4 +2230,19 @@ html, body {
   letter-spacing: 0em;
   text-align: center;
   font-weight: 400;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  font-family: "TT Norms Pro", sans-serif;
+  color: #414141;
+  background-color: #CFF9C5;
+  border: 1px solid #73B064;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }

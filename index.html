@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="stylesheet" href="./styles/css/main.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
   <title>8 march</title>
 </head>
 <body>
@@ -86,7 +90,7 @@
         <div class="cards-item first-elem">
           <div class="first-item"></div>
         </div>
-        <div class="cards-item cards-item-slider" onclick="cardsShowSlides(1)">
+        <div class="cards-item cards-item-slider">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
               <img src="./assets/postcards/card-1/card.1.png" alt="first card">
@@ -98,7 +102,7 @@
             </div>
           </div>
         </div>
-        <div class="cards-item cards-item-slider" onclick="cardsShowSlides(2)">
+        <div class="cards-item cards-item-slider">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item-content">
               <div class="choose choose-card-2"></div>
@@ -110,7 +114,7 @@
             </div>
           </div>
         </div>
-        <div class="cards-item cards-item-slider" onclick="cardsShowSlides(3)">
+        <div class="cards-item cards-item-slider">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
               <img src="./assets/postcards/card-3/card.3.png" alt="third card">
@@ -122,7 +126,7 @@
             </div>
           </div>
         </div>
-        <div class="cards-item cards-item-slider" onclick="cardsShowSlides(4)">
+        <div class="cards-item cards-item-slider">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item-content ">
               <div class="choose choose-card-4"></div>
@@ -134,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="cards-item cards-item-slider" onclick="cardsShowSlides(0)">
+        <div class="cards-item cards-item-slider">
           <div class="cards-item-inner-wrapper">
             <div class="postcard-item">
               <img src="./assets/postcards/card-5/card.5.png" alt="fifth card">
@@ -146,6 +150,10 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="direction-arrow">
+        <button class='custom-button'><i class='fas fa-chevron-left'></i> </button>
+        <button class='custom-button'><i class='fas fa-chevron-right'></i> </button>
       </div>
       <div class="dots">
         <span class="dot dot-postcard dot-active" onclick="cardsShowSlides(0)"></span>
@@ -204,7 +212,7 @@
                   <form>
                     <input class="pay-input-form-popup" type="text" id="name" name="name" placeholder="Имя">
                     <input class="pay-input-form-popup" type="email" id="email" name="email" placeholder="Электронная почта">
-                    <input class="pay-input-form-popup" type="text" id="comment" name="comment" placeholder="Комментарий">
+                    <input class="pay-input-form-popup" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  placeholder="Номер телефона">
                     <input class="pay-form-submit-popup" type="submit" value="Отправить">
                     <div class="form-checkbox">
                       <label class="pay-checkbox-text" for="myCheckbox">
@@ -342,7 +350,7 @@
                 <form>
                   <input class="pay-input-form" type="text" id="name" name="name" placeholder="Имя">
                   <input class="pay-input-form" type="email" id="email" name="email" placeholder="Электронная почта">
-                  <input class="pay-input-form" type="text" id="comment" name="comment" placeholder="Комментарий">
+                  <input class="pay-input-form" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  placeholder="Номер телефона">
                   <input class="pay-form-submit" type="submit" value="Отправить">
                   <div class="form-checkbox">
                     <label class="pay-checkbox-text" for="myCheckbox">
@@ -365,9 +373,10 @@
         <a href="https://sirota.ru/">Сайт фонда "Найди семью"</a>
           <p>Поделиться</p>
           <ul class="social-icons">
-            <li><a class="social-icon-vk" href="#" target="_blank"></a></li>
-            <li><a class="social-icon-telegram" href="#" target="_blank"></a></li>
-            <li><a class="social-icon-send" href="#" target="_blank"></a></li>
+            <li><a class="social-icon-vk" href="https://vk.com/share.php?url=ВАШ URL"
+            target="_blank"></a></li>
+            <li><a class="social-icon-telegram" href="https://telegram.me/share/url?url=ВАШ URL" target="_blank"></a></li>
+            <li><a id="copyUrlButton" class="social-icon-send"></a></li>
           </ul>
       </div>
       <div class="requisites-wrap">

@@ -29,11 +29,11 @@ menuItems.forEach(menuItem => menuItem.addEventListener("click", toggleMenu));
 // Всплывающий popup при клике на "выбрать" в блоке с открытками
 // открыть / закрыть popup
 
-const postCardBTN = document.querySelectorAll('.postcard-btn')
+const openPayPopap = document.querySelectorAll('.cards-item-slider')
 const popupVisible = document.querySelector('.pop-up-paiment')
 const closePopupBTN = document.querySelector('.paiment-block-wrapper-popup>img')
 
-postCardBTN.forEach(element => element.addEventListener("click", function(e) {
+openPayPopap.forEach(element => element.addEventListener("click", function(e) {
   e.preventDefault();
   popupVisible.classList.add("modal-show");
 }))
@@ -82,26 +82,39 @@ function showSlidesPopup(slideIndex = 0) {
 //----------------------------------------------------------------------------------
 // слайдер открыток при разрешении экрана 639 - 360px
 
+
+
 let cardsSlides = document.querySelectorAll('.cards-item-slider');
 let cardsDots = document.querySelectorAll('.dot-postcard');
+let currentSlideIndex = 0;
 
-function cardsShowSlides(slideIndex) {
-  for (let i = 0; i < cardsSlides.length; i++) {
-    if (i === slideIndex) {
-      cardsSlides[i].style.display = 'block';
-    } else {
-      cardsSlides[i].style.display = 'none';
+function showSlide(slideIndex) {
+    for (let i = 0; i < cardsSlides.length; i++) {
+        if (i === slideIndex) {
+            cardsSlides[i].style.display = 'block';
+        } else {
+            cardsSlides[i].style.display = 'none';
+        }
     }
-  }
 
-  for (let i = 0; i < cardsDots.length; i++) {
-    if (i === slideIndex) {
-      cardsDots[i].classList.add('dot-active');
-    } else {
-      cardsDots[i].classList.remove('dot-active');
+    for (let i = 0; i < cardsDots.length; i++) {
+        if (i === slideIndex) {
+            cardsDots[i].classList.add('dot-active');
+        } else {
+            cardsDots[i].classList.remove('dot-active');
+        }
     }
-  }
 }
+
+document.querySelector('.custom-button:nth-child(2)').addEventListener('click', function() {
+    currentSlideIndex = (currentSlideIndex + 1) % cardsSlides.length;
+    showSlide(currentSlideIndex);
+});
+
+document.querySelector('.custom-button:nth-child(1)').addEventListener('click', function() {
+    currentSlideIndex = (currentSlideIndex - 1 + cardsSlides.length) % cardsSlides.length;
+    showSlide(currentSlideIndex);
+});
 
 
 // при разрашении экрана больше 639px всем блокам с открытками возвращаем видимость 
@@ -179,5 +192,30 @@ sums.forEach(elem => {
 function openEmail() {
   window.location.href = `mailto: info@sirota.ru`;
 }
+
+//------------------------------------------------------------------------------------
+
+// иконка копия URL текущей страницы
+
+function copyCurrentUrlToClipboard() {
+  var currentUrl = window.location.href; // Получаем текущий URL страницы
+  navigator.clipboard.writeText(currentUrl).then(function() {
+
+      var popup = document.createElement('div');
+      popup.classList.add('popup');
+      popup.textContent = 'Ссылка скопирована: ' + currentUrl;
+      document.body.appendChild(popup);
+
+      // Удаляем элемент попапа через 3 секунды
+      setTimeout(function() {
+          popup.remove();
+      }, 2000);
+  }).catch(function(err) {
+      console.error('Ошибка копирования URL: ', err);
+  });
+}
+
+// Вызов функции при клике на кнопку
+document.getElementById('copyUrlButton').addEventListener('click', copyCurrentUrlToClipboard);
 
 
