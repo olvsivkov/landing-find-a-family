@@ -38,12 +38,13 @@
 
 .payment-block-popup {
   width: 563px;
-  height: 802px;
+  height: auto;
   background-color: $text-color-white;
   border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5%;
 
   @media (max-width: 639px){
     width: 99%;

@@ -86,7 +86,7 @@ html, body {
   left: 50%;
   right: 0;
   bottom: 0;
-  z-index: 99;
+  z-index: 3;
   background-color: #FFE49F;
   color: white;
   list-style: none;
@@ -171,12 +171,13 @@ html, body {
 
 .payment-block-popup {
   width: 563px;
-  height: 802px;
+  height: auto;
   background-color: #ffffff;
   border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5%;
 }
 @media (max-width: 639px) {
   .payment-block-popup {
