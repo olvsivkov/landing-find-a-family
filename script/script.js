@@ -284,7 +284,7 @@ sumPopupInputField.addEventListener('input', function() {
   });
 });
 
-inputBTNPopup.addEventListener("click", run_mixplat_widget(sumMainPayBlock, regularityChoosing));
+inputBTNPopup.addEventListener("click", run_mixplat_widget(sumPopupBlock, postcardName));
 
 
 
