@@ -32,7 +32,6 @@ menuItems.forEach(menuItem => menuItem.addEventListener("click", toggleMenu));
 const openPayPopap = document.querySelectorAll('.cards-item-slider')
 const popupVisible = document.querySelector('.pop-up-paiment')
 const closePopupBTN = document.querySelector('.paiment-block-wrapper-popup>img')
-console.log(openPayPopap)
 
 openPayPopap.forEach(element => element.addEventListener("click", function(e) {
   e.preventDefault();
@@ -216,5 +215,82 @@ function copyCurrentUrlToClipboard() {
 
 // Вызов функции при клике на кнопку
 document.getElementById('copyUrlButton').addEventListener('click', copyCurrentUrlToClipboard);
+
+
+//mixplat
+
+const inputBTNMainPayForm = document.querySelector(".pay-form-submit");
+const sumItems = document.querySelectorAll('.sum-item');
+const inputSum = document.querySelector('.sum-item.input');
+const regularityFieldWrapper = document.querySelector(".help-field")
+
+// === достаем данные из основного платежного блока (не попап) и отправляем их как аргументы run_mixplat_widget()  === //
+
+let sumMainPayBlock = 30000; // сумма платежа
+let regularityChoosing = "oneTime"; // частота платежа разово или ежемесячно. По умолчанию разово (oneTime)
+
+// достаем данные из выбранной суммы
+sumItems.forEach(item => {
+  item.addEventListener('click', function() {
+    sumMainPayBlock = this.innerHTML.replace(/&#x20bd/g, '');
+    sumMainPayBlock = parseFloat(sumMainPayBlock) * 100; 
+  });
+});
+
+// достаем данные если клиент ввел свою сумму и сохраняем в sumMainPayBlock
+inputSum.addEventListener('input', function() {
+ sumMainPayBlock = inputSum.value*100;
+})
+
+// устанавливаем регулярность платежа
+regularityFieldWrapper.addEventListener("click", function(e){
+  if (e.target.classList.contains("mounthly")) regularityChoosing = "monthly";
+  if (e.target.classList.contains("one-time")) regularityChoosing = "oneTime";
+})
+
+
+inputBTNMainPayForm.addEventListener("click", run_mixplat_widget(sumMainPayBlock, regularityChoosing)/*function(e) {
+  e.preventDefault();
+  run_mixplat_widget(sumMainPayBlock, regularityChoosing);
+}*/);
+
+function run_mixplat_widget(ammount, regularity) {
+  console.log(ammount)
+  console.log(regularity)
+}
+
+// === достаем данные из всплывающего платежного блока (попап) и отправляем их как аргументы run_mixplat_widget()  === //
+
+let sumPopupBlock = 30000; // сумма платежа
+let postcardName = ""
+
+let sumPopupValue = document.querySelector(".sum-item-popup")
+let sumPopupInputField = document.querySelector(".sum-item-popup.input")
+let cardsItemSlider = document.querySelectorAll(".cards-item-slider")
+let inputBTNPopup = document.querySelector(".pay-form-submit-popup")
+
+
+// достаем данные из выбранной суммы
+sumPopupValue.addEventListener('click', function() {
+  sumPopupBlock = this.innerHTML.replace(/&#x20bd/g, '');
+  sumPopupBlock = parseFloat(sumPopupBlock) * 100; 
+});
+
+// достаем данные если клиент ввел свою сумму и сохраняем в sumPopupBlock
+sumPopupInputField.addEventListener('input', function() {
+  sumPopupBlock = sumPopupInputField.value*100;
+ })
+
+ // Достаем название карточки из id элемента по которому произошел клик
+ cardsItemSlider.forEach(item => {
+  item.addEventListener('click', function() {
+    postcardName = this.getAttribute('id');
+  });
+});
+
+inputBTNPopup.addEventListener("click", run_mixplat_widget(sumMainPayBlock, regularityChoosing));
+
+
+
 
 
