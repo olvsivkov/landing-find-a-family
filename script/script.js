@@ -254,10 +254,6 @@ inputBTNMainPayForm.addEventListener("click", run_mixplat_widget(sumMainPayBlock
   run_mixplat_widget(sumMainPayBlock, regularityChoosing);
 }*/);
 
-function run_mixplat_widget(ammount, regularity) {
-  console.log(ammount)
-  console.log(regularity)
-}
 
 // === достаем данные из всплывающего платежного блока (попап) и отправляем их как аргументы run_mixplat_widget()  === //
 
