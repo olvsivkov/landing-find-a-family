@@ -69,6 +69,10 @@
           font-weight: 500;
           font-size: 24px;
           color: $text-color;
+          
+            &:hover {
+              color: $bg-color-green;
+            }
         }
       }
     }
@@ -190,13 +194,13 @@
             width: 328px;
           }
         }
+
         .choose-postcard-btn{
           @include choose-postcard-btn();
-          display: inline;
+          //display: block;
 
           @media (max-width: 862px) {
             margin-top: 3%;
-            display: inline;
           }
 
           @media (max-width: 639px){
@@ -207,7 +211,7 @@
             padding: 0;
             margin-top: 15%;
             font-size: 24px;
-            display: block;
+            line-height: 60px;
           }
 
         }

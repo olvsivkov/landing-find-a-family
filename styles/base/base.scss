@@ -37,6 +37,7 @@ body {
   -moz-user-select: none; /* для Firefox */
   -ms-user-select: none; /* для Internet Explorer/Edge */
   user-select: none;
+
 }
 
 html, body {
@@ -103,7 +104,7 @@ html, body {
 // кнопка выбрать открытку
 
 @mixin choose-postcard-btn(){
-  height: 63px;
+  //height: 63px;
   padding: 16px 32px 16px 32px;
   border: 1px solid $bg-color-green;
   border-radius: 56px;
@@ -114,6 +115,12 @@ html, body {
   font-size: 26px;
   color: $text-color-white;
   cursor: pointer;
+
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 292px;
   
 
   &:hover{
@@ -161,7 +168,7 @@ html, body {
     position: relative;
     left: -7px;
 
-    .slide {
+    .slide-item {
       width: 159px; 
       border: 1px solid $bg-color-green;
       border-radius: 40px;
@@ -184,7 +191,7 @@ html, body {
     margin: auto;
     margin-top: 2%;
 
-    .dot {
+    .dot-paiment-item {
       display: inline-block;
       width: 24px; 
       height: 24px; 
