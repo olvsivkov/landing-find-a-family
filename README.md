@@ -2,7 +2,7 @@
 
 Одностраничный сайт для благотворительного фонда "Найди семью". 
 
-Перейти на (сайт)[https://sirota.ru/events/8marta/]
+Перейти на [сайт](https://sirota.ru/events/8marta/)
 
 Какую задачу выполняет сайт:
 
@@ -16,4 +16,4 @@
 
 Сайт адаптивный, от 1920px до 360px
 
-Дизайн лендинга: (Figma.)[https://www.figma.com/file/1uBmeJL695g3VUDNvIZ63d/8-марта?type=design&node-id=0-1&mode=design]
+Дизайн лендинга: [Figma.](https://www.figma.com/file/1uBmeJL695g3VUDNvIZ63d/8-марта?type=design&node-id=0-1&mode=design)
